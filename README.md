@@ -1,0 +1,60 @@
+# Library System
+
+Este proyecto es una plataforma diseñada para gestionar libros y préstamos de manera eficiente. Construida con Django como framework backend y TailwindCSS para el diseño frontend, ofrece una solución moderna y escalable para bibliotecas y sistemas de gestión de recursos bibliográficos.
+
+## Requisitos
+
+- **Python**: v3.12 (recomendada)
+
+## Cómo empezar
+
+### MacOS/Linux
+
+1. Genera un entorno virtual:
+
+```bash
+python3.12 -m venv .venv
+```
+
+2. Activa el entorno virtual:
+
+```bash
+source .venv/bin/activate
+```
+
+### Windows
+
+1. Genera un entorno virtual:
+
+```bash
+python -m venv .venv
+```
+
+2. Activa el entorno virtual:
+
+```bash
+.venv\Scripts\Activate.bat
+```
+
+## Instalación de dependencias
+
+1. Instala las dependencias:
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Aplica las migraciones:
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+## Modo desarrollo
+
+Inicia el servidor de desarrollo:
+
+```bash
+python manage.py runserver
+```

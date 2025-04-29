@@ -1,0 +1,69 @@
+{% load static %}
+<aside class="min-w-[250px] h-full border-r border-gray-300 bg-gray-100/40 flex flex-col items-center justify-between gap-4">
+  <div class="p-4 flex items-center justify-center border-b border-gray-300 w-full gap-2">
+    <img src="{% static "logo.svg" %}"
+         alt="Logo de Library System"
+         class="w-6" />
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+    <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+    <path d="M3 6l0 13" />
+    <path d="M12 6l0 13" />
+    <path d="M21 6l0 13" />
+  </svg>
+  <h1 class="font-bold">Library System</h1>
+</div>
+<div class="w-full h-full flex flex-col gap-4 justify-center items-center">
+  <nav class="w-full h-full flex flex-col items-center justify-start text-center px-6">
+    <div class="w-full flex flex-col">
+      <h2 class="font-bold text-start mb-2">Principal</h2>
+      <a href="{% url "dashboard" %}"
+         rel="noopener noreferrer"
+         class="w-full p-4 hover:bg-black/10 rounded flex justify-start items-center gap-4 text-sm font-semibold">
+        {% include "icons/home.html" %}
+        Dashboard
+      </a>
+      <a href="{% url "books" %}"
+         rel="noopener noreferrer"
+         class="w-full p-4 hover:bg-black/10 rounded flex justify-start items-center gap-4 text-sm font-semibold">
+        {% include "icons/book.html" %}
+        Books
+      </a>
+      <a href="#"
+         rel="noopener noreferrer"
+         class="w-full p-4 hover:bg-black/10 rounded flex justify-start items-center gap-4 text-sm font-semibold">
+        {% include "icons/package.html" %}
+        Loans
+      </a>
+    </div>
+    <div class="w-full flex flex-col mt-4">
+      <h2 class="text-start font-bold mb-2">Management</h2>
+      <a href="#"
+         rel="noopener noreferrer"
+         class="w-full p-4 hover:bg-black/10 rounded flex justify-start items-center gap-4 text-sm font-semibold">
+        {% include "icons/users.html" %}
+        Members
+      </a>
+      <a href="#"
+         rel="noopener noreferrer"
+         class="w-full p-4 hover:bg-black/10 rounded flex justify-start items-center gap-4 text-sm font-semibold">
+        {% include "icons/dolar.html" %}
+        Payments
+      </a>
+    </div>
+  </nav>
+</div>
+<div class="w-full border-t border-gray-300 p-4 flex flex-col gap-4">
+  <div id="user" class="w-full flex flex-row gap-2 items-center">
+    <img src="{% static "placeholder.svg" %}"
+         alt="Foto de {{ user.name }}"
+         class="w-12 h-12 border-2 rounded-full" />
+    <div class="flex flex-col">
+      <h2 class="font-bold text-sm">{{ user.name }}</h2>
+      <h3 class="text-sm text-black/40">{{ user.email }}</h3>
+    </div>
+  </div>
+  <a href="#"
+     class="w-full px-4 py-2 bg-black text-white text-center rounded-md hover:bg-black/90 transition-all">Logout</a>
+</div>
+</aside>
