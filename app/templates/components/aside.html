@@ -34,7 +34,7 @@
       {% if user.is_authenticated %}
         <div class="w-full flex flex-col mt-4">
           <h2 class="text-start font-bold mb-2">Management</h2>
-          <a href="#"
+          <a href="{% url "members" %}"
              rel="noopener noreferrer"
              class="w-full p-4 hover:bg-black/10 rounded flex justify-start items-center gap-4 text-sm font-semibold">
             {% include "icons/users.html" %}
