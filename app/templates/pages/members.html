@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block title %}
+  <title>Members - Library System</title>
+{% endblock title %}
+{% block body %}
+  <main class="w-full h-full p-8 gap-4 flex flex-col">
+    <h1 class="text-3xl font-bold">Members Management</h1>
+    <section class="w-full flex flex-row gap-4 border rounded-lg border-gray-300 p-4">
+      {% comment %} TODO: crear los filtros {% endcomment %}
+      <input type="text"
+             placeholder="Search by book title, or borrower name..."
+             class="w-full md:w-3/4 p-2 border border-gray-300 placeholder:font-bold rounded text-sm outline-gray-400" />
+      <button class="w-fit md:w-1/4 border border-gray-300 rounded p-2 text-sm bg-black text-white hover:bg-black/80 hover:cursor-pointer transition-all">
+        Add Member
+      </button>
+    </section>
+    <section class="flex gap-4 border-2 rounded-lg border-gray-300">
+      <table class="w-full text-sm text-left">
+        <thead class="text-gray-500">
+          <tr class="border-b border-gray-300">
+            <th class="p-4">Username</th>
+            <th class="p-4">Name</th>
+            <th class="p-4">email</th>
+            <th class="p-4">Date Joined</th>
+            <th class="p-4">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for member in members %}
+            <tr class="border-b border-gray-300 hover:bg-gray-100">
+              <td class="p-4 font-semibold">{{ member.username }}</td>
+              <td class="p-4">{{ member.first_name }} {{ member.last_name }}</td>
+              <td class="p-4">{{ member.email }}</td>
+              <td class="p-4">{{ member.date_joined|date:"M j, Y" }}</td>
+              <td class="p-4">
+                {% if member.is_active %}
+                  <div class="border border-green-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-green-700 bg-green-50">
+                    Active
+                  </div>
+                {% else %}
+                  <div class="border border-red-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-red-700 bg-red-50">
+                    Suspended
+                  </div>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+    {% with members as items %}
+      {% include "components/pagination.html" %}
+    {% endwith %}
+  </main>
+{% endblock body %}
