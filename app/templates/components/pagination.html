@@ -1,0 +1,39 @@
+<nav class="font-xs w-full">
+  <div class="w-full flex justify-end items-center gap-2">
+    {% if items.has_previous %}
+      <a href="?page=1"
+         class="p-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">
+        {% include "icons/first.html" %}
+      </a>
+      <a href="?page={{ items.previous_page_number }}"
+         class="p-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">
+        {% include "icons/prev.html" %}
+      </a>
+    {% else %}
+      <a class="p-2 border border-gray-300 rounded bg-gray-100 text-gray-400 cursor-not-allowed">
+        {% include "icons/first.html" %}
+      </a>
+      <a class="p-2 border border-gray-300 rounded bg-gray-100 text-gray-400 cursor-not-allowed">
+        {% include "icons/prev.html" %}
+      </a>
+    {% endif %}
+    <span class="font-bold text-sm">Page {{ items.number }} of {{ items.paginator.num_pages }}</span>
+    {% if items.has_next %}
+      <a href="?page={{ items.next_page_number }}"
+         class="p-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">
+        {% include "icons/next.html" %}
+      </a>
+      <a href="?page={{ items.paginator.num_pages }}"
+         class="p-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">
+        {% include "icons/last.html" %}
+      </a>
+    {% else %}
+      <a class="p-2 border border-gray-300 rounded bg-gray-100 text-gray-400 cursor-not-allowed">
+        {% include "icons/next.html" %}
+      </a>
+      <a class="p-2 border border-gray-300 rounded bg-gray-100 text-gray-400 cursor-not-allowed">
+        {% include "icons/last.html" %}
+      </a>
+    {% endif %}
+  </div>
+</nav>
