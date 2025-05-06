@@ -5,6 +5,12 @@ from ..models import Book
 
 
 class Loan(models.Model):
+    STATUS_CHOICES = [
+        ("returned", "Returned"),
+        ("overdue", "Overdue"),
+        ("active", "Active"),
+    ]
+
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     request_date = models.DateField(auto_now_add=True)
@@ -12,11 +18,7 @@ class Loan(models.Model):
     return_date = models.DateField(null=True, blank=True)
     status = models.CharField(
         max_length=8,
-        choices=[
-            ("returned", "Returned"),
-            ("overdue", "Overdue"),
-            ("active", "Active"),
-        ],
+        choices=STATUS_CHOICES,
     )
 
 
