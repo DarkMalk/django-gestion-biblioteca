@@ -13,11 +13,10 @@
           {% include "icons/book.html" %}
         </header>
         <div>
-          <h2 class="font-bold text-2xl">{{ books.total_books }}</h2>
-          <p class="text-sm text-gray-500">+{{ books.added_month }} added this month</p>
+          <h2 class="font-bold text-2xl">{{ total_books }}</h2>
         </div>
         <footer class="mt-4">
-          <a href="/books"
+          <a href="{% url 'books' %}"
              class="py-2 px-4 hover:bg-black/20 rounded transition-all text-sm font-semibold">View all books</a>
         </footer>
       </article>
@@ -27,11 +26,10 @@
           {% include "icons/package.html" %}
         </header>
         <div>
-          <h2 class="font-bold text-2xl">{{ loans.active_loans }}</h2>
-          <p class="text-sm text-gray-500">+{{ loans.active_from_last_week }} from last week</p>
+          <h2 class="font-bold text-2xl">{{ active_loans }}</h2>
         </div>
         <footer class="mt-4">
-          <a href="/loans"
+          <a href="{% url "loans" %}?status=active"
              class="py-2 px-4 hover:bg-black/20 rounded transition-all text-sm font-semibold">View active loans</a>
         </footer>
       </article>
@@ -41,8 +39,7 @@
           {% include "icons/users.html" %}
         </header>
         <div>
-          <h2 class="font-bold text-2xl">{{ members.total_members }}</h2>
-          <p class="text-sm text-gray-500">+{{ members.new_members }} new members</p>
+          <h2 class="font-bold text-2xl">{{ total_members }}</h2>
         </div>
         <footer class="mt-4">
           <a href="/members"
@@ -55,16 +52,16 @@
           {% include "icons/time.html" %}
         </header>
         <div>
-          <h2 class="font-bold text-2xl">{{ loans.overdue_loans }}</h2>
-          <p class="text-sm text-gray-500">-{{ loans.overdue_from_last_week }} from last week</p>
+          <h2 class="font-bold text-2xl">{{ overdue_loans }}</h2>
         </div>
         <footer class="mt-4">
-          <a href="/loans"
+          <a href="{% url "loans" %}?status=overdue"
              class="py-2 px-4 hover:bg-black/20 rounded transition-all text-sm font-semibold">View overdue loans</a>
         </footer>
       </article>
     </section>
-    <section id="graphics">
+    <section id="graphics"
+             class="w-full grid grid-cols-2 gap-4 max-lg:grid-cols-1">
       <article class="w-full flex flex-col gap-2 p-6 border border-gray-300 rounded">
         <header class="w-full flex flex-col gap-2">
           <h1 class="text-2xl font-bold">New Members</h1>
@@ -72,27 +69,43 @@
         </header>
         <canvas id="graphic-new-members"></canvas>
       </article>
+      <article class="w-full flex flex-col gap-2 p-6 border border-gray-300 rounded">
+        <header class="w-full flex flex-col gap-2">
+          <h1 class="text-2xl font-bold">Library Activity</h1>
+          <p class="text-sm text-gray-500">Monthly loans and returns over the past 7 months</p>
+        </header>
+        <canvas id="graphic-library-activity"></canvas>
+      </article>
+      <article class="w-full flex flex-col gap-2 p-6 border border-gray-300 rounded lg:col-span-2">
+        <header class="w-full flex flex-col gap-2">
+          <h1 class="text-2xl font-bold">Books by Category</h1>
+          <p class="text-sm text-gray-500">Distribution of books across categories</p>
+        </header>
+        <canvas id="graphic-books-by-category"></canvas>
+      </article>
     </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="module">
     const $ = (element) => document.querySelector(element)
 
-    const ctx = $("#graphic-new-members").getContext("2d")
+    const dataNewMembers = {{ new_members_last_seven_months|safe }}
+    const dataLibraryActivity = {{ library_activity_last_seven_months|safe }}
+    const dataBooksByCategory = {{ books_by_category|safe }}
+    
+    const ctxNewMembers = $("#graphic-new-members").getContext("2d")
+    const ctxLibraryActivity = $("#graphic-library-activity").getContext("2d")
+    const ctxBooksByCategory = $("#graphic-books-by-category").getContext("2d")
 
-    const data = {{ new_members_last_seven_months|safe }}
-
-    console.log(data)
-
-    new Chart(ctx, {
+    new Chart(ctxNewMembers, {
       type: 'bar',
       data: {
-        labels: Object.keys(data).map(key => key),
+        labels: Object.keys(dataNewMembers).map(key => key),
         datasets: [{
           label: 'New members',
-          data: Object.values(data).map(value => value),
+          data: Object.values(dataNewMembers).map(value => value),
           borderWidth: 1,
-          backgroundColor: ''
+          backgroundColor: '#FF713B'
         }]
       },
       options: {
@@ -101,6 +114,57 @@
             beginAtZero: true
           }
         },
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    })
+
+    new Chart(ctxLibraryActivity, {
+      type: "bar",
+      data: {
+        labels: Object.keys(dataLibraryActivity).map(key => key),
+        datasets: [{
+          label: "Loans",
+          data: Object.values(dataLibraryActivity).map(value => value.loans),
+          borderWidth: 1,
+          backgroundColor: '#7D79D2'
+        },{
+          label: "returned",
+          data: Object.values(dataLibraryActivity).map(value => value.returned),
+          borderWidth: 1,
+          backgroundColor: '#77C392'
+        }],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'bottom'
+          }
+        }
+      }
+    })
+
+    new Chart(ctxBooksByCategory, {
+      type: "bar",
+      data: {
+        labels: Object.keys(dataBooksByCategory).map(key => key),
+        datasets: [{
+          label: "Number of books",
+          data: Object.values(dataBooksByCategory).map(value => value),
+          borderWidth: 1,
+          backgroundColor: '#7D79D2'
+        }],
+      },
+      options: {
+        indexAxis: 'y',
         plugins: {
           legend: {
             position: 'bottom'
