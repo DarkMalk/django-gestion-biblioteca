@@ -3,7 +3,72 @@
   <title>Books - Library System</title>
 {% endblock title %}
 {% block body %}
-  <main>
-    <h1>Books</h1>
+  <main class="w-full h-full p-8 flex flex-col gap-4">
+    <h1 class="text-2xl font-bold">Available Books</h1>
+    <section class="w-full flex flex-row gap-4 border rounded-lg border-gray-300 p-4">
+      {% comment %} TODO: crear los filtros {% endcomment %}
+      <input type="text"
+             placeholder="Search by title, author, or ISBN..."
+             class="w-full md:w-2/3 p-2 border border-gray-300 placeholder:font-bold rounded text-sm outline-gray-400" />
+      <select class="w-full md:w-1/3 border border-gray-300 rounded p-2 text-sm">
+        <option value="all">All Categories</option>
+        <option value="fiction">Fiction</option>
+        <option value="non-fiction">Non-Fiction</option>
+        <option value="science">Science</option>
+        <option value="history">History</option>
+        <option value="biography">Biography</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="mystery">Mystery</option>
+      </select>
+    </section>
+    <section class="flex gap-4 border-2 rounded-lg border-gray-300">
+      <table class="w-full text-sm text-left">
+        <thead class="text-gray-500">
+          <tr class="border-b border-gray-300">
+            <th class="p-4">Title</th>
+            <th class="p-4">Author</th>
+            <th class="p-4">ISBN</th>
+            <th class="p-4">Publisher</th>
+            <th class="p-4">Category</th>
+            <th class="p-4">stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for book in books %}
+            <tr class="border-b border-gray-300 hover:bg-gray-100">
+              <td class="p-4 font-semibold">{{ book.title }}</td>
+              <td class="p-4">{{ book.author }}</td>
+              <td class="p-4">{{ book.isbn }}</td>
+              <td class="p-4">{{ book.publisher }}</td>
+              <td class="p-4">
+                <div class="border border-gray-300 px-2.5 py-0.5 text-xs font-semibold rounded-full w-fit text-center">
+                  {{ book.category }}
+                </div>
+              </td>
+              <td class="p-4">
+                {% if book.stock > 0 and book.stock <= 5 %}
+                  <div class=" border border-yellow-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-yellow-700 bg-yellow-50 text-center">
+                    {{ book.stock }} Available
+                  </div>
+                {% endif %}
+                {% if book.stock > 5 %}
+                  <div class=" border border-green-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-green-700 bg-green-50 text-center">
+                    {{ book.stock }} Available
+                  </div>
+                {% endif %}
+                {% if book.stock == 0 %}
+                  <div class=" border border-red-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-red-700 bg-red-50 text-center">
+                    Out of stock
+                  </div>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+    {% with books as items %}
+      {% include "components/pagination.html" %}
+    {% endwith %}
   </main>
 {% endblock body %}
