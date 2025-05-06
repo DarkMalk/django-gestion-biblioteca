@@ -58,3 +58,9 @@ Inicia el servidor de desarrollo:
 ```bash
 python manage.py runserver
 ```
+
+## Crear super usuario para panel administrativo de Django
+
+```bash
+python manage.py createsuperuser
+```
