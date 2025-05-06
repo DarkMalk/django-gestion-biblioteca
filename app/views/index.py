@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-from ..models import Book
+from ..models import Book, Loan
+from django.contrib.auth.models import User
 
 
 @login_required
@@ -8,6 +9,9 @@ def index(request):
     books = Book.objects.all()
 
     total_books = books.count()
+    total_users = User.objects.count()
+    active_loans = Loan.objects.filter(status="active").count()
+    overdue_loans = Loan.objects.filter(status="overdue").count()
     books_by_category = {}
 
     for book in books:
@@ -20,9 +24,9 @@ def index(request):
     data = {
         "total_books": total_books,
         "books_by_category": books_by_category,
-        "total_members": 573,
-        "active_loans": 145,
-        "overdue_loans": 12,
+        "total_members": total_users,
+        "active_loans": active_loans,
+        "overdue_loans": overdue_loans,
         "new_members_last_seven_months": {
             "Jan": 12,
             "Feb": 15,
