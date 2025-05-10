@@ -2,11 +2,24 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from ..models import Book, Loan
 from django.contrib.auth.models import User
+from django.db.models.functions import TruncMonth
+from django.db.models import Count
 
 
 @login_required
 def index(request):
     books = Book.objects.all()
+
+    users_by_month = (
+        User.objects.annotate(month=TruncMonth("date_joined"))
+        .values("month")
+        .annotate(count=Count("id"))
+        .order_by("month")
+    )
+
+    users_by_month_data = {
+        entry["month"].strftime("%b"): entry["count"] for entry in users_by_month
+    }
 
     total_books = books.count()
     total_users = User.objects.count()
@@ -27,15 +40,7 @@ def index(request):
         "total_members": total_users,
         "active_loans": active_loans,
         "overdue_loans": overdue_loans,
-        "new_members_last_seven_months": {
-            "Jan": 12,
-            "Feb": 15,
-            "Mar": 32,
-            "Apr": 18,
-            "May": 14,
-            "Jun": 11,
-            "Jul": 9,
-        },
+        "new_members_last_seven_months": users_by_month_data,
         "library_activity_last_seven_months": {
             "Jan": {"loans": 65, "returned": 42},
             "Feb": {"loans": 59, "returned": 55},
