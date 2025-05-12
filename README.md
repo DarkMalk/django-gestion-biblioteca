@@ -6,6 +6,10 @@ Este proyecto es una plataforma diseñada para gestionar libros y préstamos de 
 
 - **Python**: v3.12 (recomendada)
 
+# Lista de tareas en Notion
+
+Puedes revisar las tareas pendientes o ya completadas en el siguiente enlace: [Ir a notion](https://www.notion.so/1f1e90013c10800996d5d77ebbd19be7?v=1f1e90013c10813bb25d000c41febc53&pvs=4).
+
 ## Cómo empezar
 
 ### MacOS/Linux
