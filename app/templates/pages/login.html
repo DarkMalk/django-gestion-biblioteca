@@ -18,6 +18,10 @@
     <form method="post"
           class="flex flex-col gap-4 bg-white p-6 rounded-lg w-96 text-sm border border-gray-300 shadow-lg">
       {% csrf_token %}
+      <div id="error"
+           class="{% if not error %}hidden{% endif %} border border-red-200 px-4 py-2 w-full rounded-lg text-xs font-bold text-red-700 bg-red-50 transition text-center">
+        {{ error }}
+      </div>
       <label class="flex flex-col gap-2 font-medium">
         Username
         <input type="text"
