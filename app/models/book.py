@@ -13,13 +13,23 @@ class Book(models.Model):
     publisher = models.ForeignKey(Editorial, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     stock = models.PositiveIntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.title} by {self.author.name}"
+        return f"{self.title}"
 
 
 class BookAdmin(admin.ModelAdmin):
-    list_display = ("id", "title", "author", "isbn", "publisher", "category", "stock")
+    list_display = (
+        "id",
+        "title",
+        "author",
+        "isbn",
+        "publisher",
+        "category",
+        "stock",
+        "created_at",
+    )
     search_fields = (
         "title",
         "author__name",
