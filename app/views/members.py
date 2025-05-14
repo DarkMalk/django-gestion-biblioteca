@@ -9,6 +9,10 @@ def members(request):
     members = User.objects.all()
 
     status = request.GET.get("status")
+    search = request.GET.get("search")
+
+    if search:
+        members = members.filter(username__icontains=search)
 
     if status in ["active", "suspended"]:
         members = members.filter(is_active=(status == "active"))
