@@ -5,17 +5,25 @@
 {% block body %}
   <main class="w-full h-full p-8 gap-4 flex flex-col">
     <h1 class="text-3xl font-bold">Loans Management</h1>
-    <section class="w-full flex flex-row gap-4 border rounded-lg border-gray-300 p-4">
-      {% comment %} TODO: crear los filtros {% endcomment %}
-      <input type="text"
-             placeholder="Search by book title, or borrower name..."
-             class="w-full md:w-2/3 p-2 border border-gray-300 placeholder:font-bold rounded text-sm outline-gray-400" />
-      <select class="w-full md:w-1/3 border border-gray-300 rounded p-2 text-sm">
-        <option value="all">All Loans</option>
-        <option value="fiction">Returned</option>
-        <option value="non-fiction">Active</option>
-        <option value="science">Overdue</option>
-      </select>
+    <section class="border rounded-lg border-gray-300 p-4">
+      <form method="get" class="flex flex-row gap-4 w-full">
+        <input type="text"
+               name="search"
+               value="{{ request.GET.search }}"
+               placeholder="Search by book title..."
+               class="w-full md:w-2/3 p-2 border border-gray-300 placeholder:font-bold rounded text-sm outline-gray-400" />
+        <select name="status"
+                value="{{ request.GET.status }}"
+                class="w-full md:w-1/3 border border-gray-300 rounded p-2 text-sm">
+          <option value="" {% if request.GET.status == "" %}selected{% endif %}>All Loans</option>
+          <option value="returned"
+                  {% if request.GET.status == "returned" %}selected{% endif %}>Returned</option>
+          <option value="active"
+                  {% if request.GET.status == "active" %}selected{% endif %}>Active</option>
+          <option value="overdue"
+                  {% if request.GET.status == "overdue" %}selected{% endif %}>Overdue</option>
+        </select>
+      </form>
     </section>
     <section class="flex gap-4 border-2 rounded-lg border-gray-300">
       <table class="w-full text-sm text-left">
@@ -33,8 +41,8 @@
         <tbody>
           {% for loan in loans %}
             <tr class="border-b border-gray-300 hover:bg-gray-100">
-              <td class="p-4 font-semibold">{{ loan.book_title }}</td>
-              <td class="p-4">{{ loan.user_name }}</td>
+              <td class="p-4 font-semibold">{{ loan.book }}</td>
+              <td class="p-4">{{ loan.user }}</td>
               <td class="p-4">{{ loan.request_date|date:"M j, Y" }}</td>
               <td class="p-4">{{ loan.due_date|date:"M j, Y" }}</td>
               <td class="p-4">
@@ -74,4 +82,10 @@
       {% include "components/pagination.html" %}
     {% endwith %}
   </main>
+  <script type="module">
+    const $form = document.querySelector("form")
+    const $selection = $form.querySelector("select")
+
+    $selection.addEventListener("change", () => $form.submit())
+  </script>
 {% endblock body %}

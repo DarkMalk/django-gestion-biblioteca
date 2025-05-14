@@ -6,9 +6,16 @@ from ..models import Loan
 
 @login_required
 def loans(request):
-    loans = Loan.objects.all()
+    if request.user.groups.filter(name="bibliotecario").exists():
+        loans = Loan.objects.all()
+    else:
+        loans = Loan.objects.filter(user=request.user)
 
     status = request.GET.get("status")
+    search = request.GET.get("search")
+
+    if search:
+        loans = loans.filter(book__title__icontains=search)
 
     if status in [choice[0] for choice in Loan.STATUS_CHOICES]:
         loans = loans.filter(status=status)
