@@ -5,6 +5,7 @@ Este proyecto es una plataforma diseñada para gestionar libros y préstamos de 
 ## Requisitos
 
 - **Python**: v3.12 (recomendada)
+- **Node.JS**: v22.11.0 (recomendada)
 
 # Lista de tareas en Notion
 
@@ -67,4 +68,28 @@ python manage.py runserver
 
 ```bash
 python manage.py createsuperuser
+```
+
+# Para que se usa Node.JS en el proyecto?
+
+En el proyecto se utiliza Node.JS con el propósito de construir con el framework de tailwindcss un archivo css final con **solo** las clases que utilizamos en todo el proyecto, en vez de importar todas las clases disponibles de tailwindcss que no necesitemos.
+
+Para ello tenemos dos comandos que podemos utilizar para realizar la `build` del archivo final de tailwindcss.
+
+Primero debemos instalar las dependencias de tailwind, por lo que debemos utilizar un manejador de paquetes como `npm` o `pnpm`, etc.
+
+```bash
+npm install
+```
+
+El script `styles:build` nos permitirá realizar una build final una vez por comando.
+
+```bash
+node --run styles:build
+```
+
+El script `styles:watch` nos permite realizar una build a medida que vayamos desarrollando, por lo que ira revisando los cambios que hagamos en el proyecto para incluirlo en el archivo final ds css.
+
+```bash
+node --run styles:watch
 ```
