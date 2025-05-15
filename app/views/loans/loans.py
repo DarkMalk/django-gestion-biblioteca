@@ -24,4 +24,4 @@ def loans(request):
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
 
-    return render(request, "pages/loans.html", context={"loans": page_obj})
+    return render(request, "pages/loans/loans.html", context={"loans": page_obj})
