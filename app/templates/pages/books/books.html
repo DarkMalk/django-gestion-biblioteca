@@ -4,7 +4,7 @@
 {% endblock title %}
 {% block body %}
   <main class="w-[calc(100%-48px)] md:w-[calc(100%-250px)] h-full p-8 flex flex-col gap-4">
-    <h1 class="text-2xl font-bold">Available Books</h1>
+    <h1 class="text-3xl font-bold">Available Books</h1>
     <section class="w-full flex flex-row gap-4 border rounded-lg border-gray-300 p-4 max-lg:flex-col">
       <form method="get" class="w-full flex flex-row gap-4">
         <input type="text"
@@ -22,9 +22,10 @@
           {% endfor %}
         </select>
       </form>
-      <button class="w-full lg:w-1/4 border border-gray-300 rounded p-2 text-sm bg-black text-white hover:bg-black/80 hover:cursor-pointer transition-all">
+      <a href="{% url "new_book" %}"
+         class="w-full lg:w-1/4 border text-center border-gray-300 rounded p-2 text-sm bg-black text-white hover:bg-black/80 hover:cursor-pointer transition-all">
         Add book
-      </button>
+      </a>
     </section>
     <section class="w-full flex border-2 rounded-lg border-gray-300">
       <div class="w-full overflow-x-auto">
