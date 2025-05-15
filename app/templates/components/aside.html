@@ -1,52 +1,60 @@
 {% load static %}
-<aside class="min-w-[250px] h-full border-r border-gray-300 bg-gray-100/40 flex flex-col items-center justify-between gap-4">
-  <div class="p-4 flex items-center justify-center border-b border-gray-300 w-full gap-2">
+<aside class="w-12 md:min-w-[250px] h-full border-r border-gray-300 bg-gray-100/40 flex flex-col items-center justify-between gap-4">
+  <div class="w-full max-md:hidden p-4 flex items-center justify-center border-b border-gray-300 gap-2">
     {% include "icons/library_icon.html" %}
     <h1 class="font-bold">Library System</h1>
   </div>
+  <div class="w-full md:hidden py-4 flex items-center justify-center border-b border-gray-300">
+    {% include "icons/library_icon.html" %}
+  </div>
   <div class="w-full h-full flex flex-col gap-4 justify-center items-center">
-    <nav class="w-full h-full flex flex-col items-center justify-start text-center px-6 overflow-y-auto">
+    <nav class="w-full h-full flex flex-col items-center justify-start text-center md:px-6 overflow-y-auto">
       <div class="w-full flex flex-col">
-        <h2 class="font-bold text-start mb-2">Principal</h2>
+        <h2 class="max-md:hidden font-bold text-start mb-2">Principal</h2>
         {% if user.is_authenticated %}
           <a href="{% url "dashboard" %}"
              rel="noopener noreferrer"
-             class="w-full p-4 hover:bg-black/10 rounded flex justify-start items-center gap-4 text-sm font-semibold">
+             title="Ir a pagina principal"
+             class="w-full py-4 md:px-4 hover:bg-black/10 rounded flex justify-center md:justify-start items-center gap-4 text-sm font-semibold">
             {% include "icons/home.html" %}
-            Dashboard
+            <span class="max-md:hidden">Dashboard</span>
           </a>
         {% endif %}
         <a href="{% url "books" %}"
            rel="noopener noreferrer"
-           class="w-full p-4 hover:bg-black/10 rounded flex justify-start items-center gap-4 text-sm font-semibold">
+           title="Ir a pagina de libros"
+           class="w-full py-4 md:px-4 hover:bg-black/10 rounded flex justify-center md:justify-start items-center gap-4 text-sm font-semibold">
           {% include "icons/book.html" %}
-          Books
+          <span class="max-md:hidden">Books</span>
         </a>
         {% if user.is_authenticated %}
           <a href="{% url "loans" %}"
              rel="noopener noreferrer"
-             class="w-full p-4 hover:bg-black/10 rounded flex justify-start items-center gap-4 text-sm font-semibold">
+             title="Ir a pagina de prestamos"
+             class="w-full py-4 md:px-4 hover:bg-black/10 rounded flex justify-center md:justify-start items-center gap-4 text-sm font-semibold">
             {% include "icons/package.html" %}
-            Loans
+            <span class="max-md:hidden">Loans</span>
           </a>
         {% endif %}
       </div>
       {% if user.is_authenticated %}
-        <div class="w-full flex flex-col mt-4">
-          <h2 class="text-start font-bold mb-2">Management</h2>
+        <div class="w-full flex flex-col mt-4 max-md:pt-2 max-md:border-t border-gray-300">
+          <h2 class="max-md:hidden text-start font-bold mb-2">Management</h2>
           <a href="{% url "members" %}"
              rel="noopener noreferrer"
-             class="w-full p-4 hover:bg-black/10 rounded flex justify-start items-center gap-4 text-sm font-semibold">
+             title="Ir a pagina de miembros"
+             class="w-full py-4 md:px-4 hover:bg-black/10 rounded flex justify-center md:justify-start items-center gap-4 text-sm font-semibold">
             {% include "icons/users.html" %}
-            Members
+            <span class="max-md:hidden">Members</span>
           </a>
         </div>
       {% endif %}
     </nav>
   </div>
   {% if user.is_authenticated %}
-    <div class="w-full h-fit border-t border-gray-300 p-4 flex flex-row items-center justify-center gap-2">
-      <div id="user" class="w-full flex flex-row gap-2 items-center">
+    <div class="w-full h-fit border-t border-gray-300 md:p-4 flex flex-row items-center justify-center gap-2">
+      <div id="user"
+           class="max-md:hidden w-full flex flex-row gap-2 items-center">
         <div class="flex flex-col w-full">
           <h2 class="font-bold text-sm">{{ user.first_name }} {{ user.last_name }}</h2>
           <h3 class="text-sm text-black/40">@{{ user.username }}</h3>
@@ -59,11 +67,11 @@
       </a>
     </div>
   {% else %}
-    <div class="w-full h-fit border-t border-gray-300 p-4 flex flex-row items-center justify-center gap-2">
+    <div class="w-full h-fit border-t border-gray-300 md:p-4 flex flex-row items-center justify-center gap-2">
       <a href="{% url 'login' %}"
          title="Ir a pagina para iniciar sesión"
-         class="w-full p-2 text-center rounded-md bg-black text-white hover:bg-black/90 transition-all flex flex-row items-center justify-center gap-2">
-        Iniciar Sesión
+         class="w-full p-2 text-center rounded-md md:bg-black md:text-white md:hover:bg-black/90 transition-all flex flex-row items-center justify-center gap-2">
+        <span class="max-md:hidden">Iniciar Sesión</span>
         {% include "icons/login.html" %}
       </a>
     </div>
