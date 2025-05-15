@@ -3,9 +3,9 @@
   <title>Books - Library System</title>
 {% endblock title %}
 {% block body %}
-  <main class="w-full h-full p-8 gap-4 flex flex-col">
+  <main class="w-[calc(100%-48px)] md:w-[calc(100%-250px)] h-full p-8 gap-4 flex flex-col">
     <h1 class="text-3xl font-bold">Loans Management</h1>
-    <section class="border rounded-lg border-gray-300 p-4">
+    <section class="flex flex-col md:flex-row gap-4 border rounded-lg border-gray-300 p-4">
       <form method="get" class="flex flex-row gap-4 w-full">
         <input type="text"
                name="search"
@@ -24,59 +24,64 @@
                   {% if request.GET.status == "overdue" %}selected{% endif %}>Overdue</option>
         </select>
       </form>
+      <button class="w-full lg:w-1/4 border border-gray-300 rounded p-2 text-sm bg-black text-white hover:bg-black/80 hover:cursor-pointer transition-all">
+        Add book
+      </button>
     </section>
-    <section class="flex gap-4 border-2 rounded-lg border-gray-300">
-      <table class="w-full text-sm text-left">
-        <thead class="text-gray-500">
-          <tr class="border-b border-gray-300">
-            <th class="p-4">Book Title</th>
-            <th class="p-4">Borrower</th>
-            <th class="p-4">Checkout Date</th>
-            <th class="p-4">Due Date</th>
-            <th class="p-4">Return Date</th>
-            <th class="p-4">Status</th>
-            <th class="p-4">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for loan in loans %}
-            <tr class="border-b border-gray-300 hover:bg-gray-100">
-              <td class="p-4 font-semibold">{{ loan.book }}</td>
-              <td class="p-4">{{ loan.user }}</td>
-              <td class="p-4">{{ loan.request_date|date:"M j, Y" }}</td>
-              <td class="p-4">{{ loan.due_date|date:"M j, Y" }}</td>
-              <td class="p-4">
-                {% if loan.return_date %}
-                  {{ loan.return_date|date:"M j, Y" }}
-                {% else %}
-                  -
-                {% endif %}
-              </td>
-              <td class="p-4">
-                {% if loan.status == "returned" %}
-                  <div class=" border border-blue-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-blue-700 bg-blue-50">
-                    {{ loan.status }}
-                  </div>
-                {% endif %}
-                {% if loan.status == "active" %}
-                  <div class=" border border-green-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-green-700 bg-green-50">
-                    {{ loan.status }}
-                  </div>
-                {% endif %}
-                {% if loan.status == "overdue" %}
-                  <div class=" border border-red-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-red-700 bg-red-50">
-                    {{ loan.status }}
-                  </div>
-                {% endif %}
-              </td>
-              <td class="p-4 flex items-center justify-center">
-                <a href="{% url "loans" %}"
-                   class="p-2 hover:bg-black/20 rounded transition-colors">{% include "icons/eye.html" %}</a>
-              </td>
+    <section class="w-full flex gap-4 border-2 rounded-lg border-gray-300">
+      <div class="w-full overflow-x-auto">
+        <table class="w-full min-w-[800px] text-sm text-left">
+          <thead class="text-gray-500">
+            <tr class="border-b border-gray-300">
+              <th class="p-4">Book Title</th>
+              <th class="p-4">Borrower</th>
+              <th class="p-4">Checkout Date</th>
+              <th class="p-4">Due Date</th>
+              <th class="p-4">Return Date</th>
+              <th class="p-4">Status</th>
+              <th class="p-4">Actions</th>
             </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {% for loan in loans %}
+              <tr class="border-b border-gray-300 hover:bg-gray-100">
+                <td class="p-4 font-semibold">{{ loan.book }}</td>
+                <td class="p-4">{{ loan.user }}</td>
+                <td class="p-4">{{ loan.request_date|date:"M j, Y" }}</td>
+                <td class="p-4">{{ loan.due_date|date:"M j, Y" }}</td>
+                <td class="p-4">
+                  {% if loan.return_date %}
+                    {{ loan.return_date|date:"M j, Y" }}
+                  {% else %}
+                    -
+                  {% endif %}
+                </td>
+                <td class="p-4">
+                  {% if loan.status == "returned" %}
+                    <div class=" border border-blue-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-blue-700 bg-blue-50">
+                      {{ loan.status }}
+                    </div>
+                  {% endif %}
+                  {% if loan.status == "active" %}
+                    <div class=" border border-green-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-green-700 bg-green-50">
+                      {{ loan.status }}
+                    </div>
+                  {% endif %}
+                  {% if loan.status == "overdue" %}
+                    <div class=" border border-red-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-red-700 bg-red-50">
+                      {{ loan.status }}
+                    </div>
+                  {% endif %}
+                </td>
+                <td class="p-4 flex items-center justify-center">
+                  <a href="{% url "loans" %}"
+                     class="p-2 hover:bg-black/20 rounded transition-colors">{% include "icons/eye.html" %}</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </section>
     {% with loans as items %}
       {% include "components/pagination.html" %}
