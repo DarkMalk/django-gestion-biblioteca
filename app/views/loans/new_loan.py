@@ -7,6 +7,7 @@ from datetime import date, timedelta
 
 @login_required
 def new_loan(request):
+    # TODO: revisar que el usuario no tenga un prestamo activo.
     min_due_date = date.today() + timedelta(days=1)
     max_due_date = date.today() + timedelta(days=7)
 
@@ -31,6 +32,16 @@ def new_loan(request):
                 request,
                 "pages/loans/new_loan.html",
                 {**context, "error": "All fields are required."},
+            )
+
+        if Loan.objects.filter(status="active", user_id=user_id).exists():
+            return render(
+                request,
+                "pages/loans/new_loan.html",
+                {
+                    **context,
+                    "error": "User already has an active loan.",
+                },
             )
 
         if due_date < str(min_due_date) or due_date > str(max_due_date):
