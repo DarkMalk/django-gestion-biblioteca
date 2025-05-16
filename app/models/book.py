@@ -13,6 +13,7 @@ class Book(models.Model):
     publisher = models.ForeignKey(Editorial, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     stock = models.PositiveIntegerField()
+    active = models.BooleanField(default=True, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -28,6 +29,7 @@ class BookAdmin(admin.ModelAdmin):
         "publisher",
         "category",
         "stock",
+        "active",
         "created_at",
     )
     search_fields = (
