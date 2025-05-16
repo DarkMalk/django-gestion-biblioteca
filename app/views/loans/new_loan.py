@@ -7,7 +7,6 @@ from datetime import date, timedelta
 
 @login_required
 def new_loan(request):
-    # TODO: revisar que el usuario no tenga un prestamo activo.
     min_due_date = date.today() + timedelta(days=1)
     max_due_date = date.today() + timedelta(days=7)
 
