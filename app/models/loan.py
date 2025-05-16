@@ -17,6 +17,7 @@ class Loan(models.Model):
     due_date = models.DateField()
     return_date = models.DateField(null=True, blank=True)
     status = models.CharField(
+        default=STATUS_CHOICES[2][0],
         max_length=8,
         choices=STATUS_CHOICES,
     )
