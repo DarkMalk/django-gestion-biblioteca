@@ -38,6 +38,7 @@
               <th class="p-4">Publisher</th>
               <th class="p-4">Category</th>
               <th class="p-4">stock</th>
+              <th class="p-4">View</th>
             </tr>
           </thead>
           <tbody>
@@ -68,6 +69,13 @@
                       Out of stock
                     </div>
                   {% endif %}
+                </td>
+                <td class="p-4">
+                  <a href="{% url "view_book" book.id %}"
+                     title="Ir a ver el libro {{ book.title }}"
+                     class="flex w-fit p-2 hover:bg-black/20 rounded transition-colors">
+                    {% include "icons/eye.html" %}
+                  </a>
                 </td>
               </tr>
             {% endfor %}
