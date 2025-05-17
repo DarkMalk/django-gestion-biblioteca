@@ -40,7 +40,7 @@
               <th class="p-4">Due Date</th>
               <th class="p-4">Return Date</th>
               <th class="p-4">Status</th>
-              <th class="p-4">Actions</th>
+              <th class="p-4">View</th>
             </tr>
           </thead>
           <tbody>
@@ -74,9 +74,11 @@
                     </div>
                   {% endif %}
                 </td>
-                <td class="p-4 flex items-center justify-center">
+                <td class="p-4">
                   <a href="{% url "loans" %}"
-                     class="p-2 hover:bg-black/20 rounded transition-colors">{% include "icons/eye.html" %}</a>
+                     class="flex w-fit p-2 hover:bg-black/20 rounded transition-colors">
+                    {% include "icons/eye.html" %}
+                  </a>
                 </td>
               </tr>
             {% endfor %}
