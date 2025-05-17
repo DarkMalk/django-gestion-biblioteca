@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% block title %}
+  <title>{{ book.title }} - Library System</title>
+{% endblock title %}
+{% block body %}
+  <main class="w-[calc(100%-48px)] md:w-[calc(100%-250px)] h-full p-8 flex flex-col gap-4">
+    <div class="container mx-auto p-8 border border-gray-300 rounded-lg flex gap-4 items-center justify-between">
+      <div class="flex flex-row items-center gap-4">
+        <a href="{% url "books" %}"
+           title="Volver a pagina de todos los libros"
+           class="h-12 w-12 p-2 border border-gray-300 rounded flex justify-center items-center hover:bg-gray-100 transition-colors">
+          {% include "icons/arrow-left.html" %}
+        </a>
+        <div class="flex flex-col gap-0.5">
+          <h1 class="text-2xl md:text-3xl font-bold">{{ book.title }}</h1>
+          <p class="text-sm font-semibold text-gray-500">Book details and information</p>
+        </div>
+      </div>
+      <div class="flex flex-row gap-4">
+        <a href="{% url "edit_book" book.id %}"
+           title="Ir a editar el libro {{ book.title }}"
+           class="h-12 px-4 flex items-center justify-center bg-black hover:bg-black/80 transition-colors font-semibold rounded text-white cursor-pointer">
+          Edit Book
+        </a>
+      </div>
+    </div>
+    <section class="container mx-auto flex flex-col gap-4 border border-gray-300 rounded-lg p-8">
+      <h2 class="font-semibold text-2xl flex flex-row gap-2 items-center pb-6 border-b border-gray-300">
+        {% include "icons/book.html" %}
+        Book Information
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="flex flex-col gap-1">
+          <h4 class="font-semibold text-gray-500">Title</h4>
+          <p>{{ book.title }}</p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h4 class="font-semibold text-gray-500">Author</h4>
+          <p>{{ book.author }}</p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h4 class="font-semibold text-gray-500">ISBN</h4>
+          <p>{{ book.isbn }}</p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h4 class="font-semibold text-gray-500">Publisher</h4>
+          <p>{{ book.publisher }}</p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h4 class="font-semibold text-gray-500">Category</h4>
+          <p class="border border-gray-300 px-2.5 py-0.5 text-xs font-semibold rounded-full w-fit text-center">
+            {{ book.category }}
+          </p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h4 class="font-semibold text-gray-500">stock</h4>
+          {% if book.stock > 0 and book.stock <= 5 %}
+            <p class=" border border-yellow-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-yellow-700 bg-yellow-50 text-center">
+              {{ book.stock }} Available
+            </p>
+          {% endif %}
+          {% if book.stock > 5 %}
+            <p class=" border border-green-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-green-700 bg-green-50 text-center">
+              {{ book.stock }} Available
+            </p>
+          {% endif %}
+          {% if book.stock == 0 %}
+            <p class=" border border-red-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-red-700 bg-red-50 text-center">
+              Out of stock
+            </p>
+          {% endif %}
+        </div>
+        <div class="flex flex-col gap-1">
+          <h4 class="font-semibold text-gray-500">Status</h4>
+          {% if book.active %}
+            <p class=" border border-green-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-green-700 bg-green-50 text-center">
+              Active
+            </p>
+          {% else %}
+            <p class=" border border-red-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-red-700 bg-red-50 text-center">
+              Disabled
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock body %}
