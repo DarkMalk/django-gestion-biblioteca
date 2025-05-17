@@ -8,7 +8,7 @@ def books(request):
     category = request.GET.get("category")
     categories = Category.objects.values_list("name", flat=True)
 
-    books = Book.objects.all()
+    books = Book.objects.filter(active=True)
 
     if category in categories:
         books = books.filter(category__name=category)
