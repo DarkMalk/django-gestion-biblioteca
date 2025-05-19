@@ -22,9 +22,11 @@
                   {% if request.GET.status == "suspended" %}selected{% endif %}>Suspended</option>
         </select>
       </form>
-      <button class="w-full md:w-1/4 border border-gray-300 rounded p-2 text-sm bg-black text-white hover:bg-black/80 hover:cursor-pointer transition-all">
+      <a href="{% url "new_member" %}"
+         title="Ir a página para crear usuarios"
+         class="w-full md:w-1/4 border border-gray-300 rounded p-2 text-sm bg-black text-white hover:bg-black/80 hover:cursor-pointer transition-all text-center">
         Add Member
-      </button>
+      </a>
     </section>
     <section class="w-full flex border-2 rounded-lg border-gray-300">
       <div class="w-full overflow-x-auto">
