@@ -7,7 +7,7 @@ node_modules
 # Files
 .DS_Store
 .env
-db.sqlite3
+*.sqlite3
 tailwind.config.js
 pnpm-lock.yaml
 yarn.lock
