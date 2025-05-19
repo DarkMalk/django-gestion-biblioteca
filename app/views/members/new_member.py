@@ -8,8 +8,15 @@ def new_member(request):
     if request.user.role == "lector":
         return redirect("index")
 
+    roles = User.ROLE_CHOICES
+
+    if request.user.role == "librarian":
+        roles = [
+            role for role in roles if role[0] != "admin" and role[0] != "librarian"
+        ]
+
     context = {
-        "roles": User.ROLE_CHOICES,
+        "roles": roles,
     }
 
     if request.method == "POST":
