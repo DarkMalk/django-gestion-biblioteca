@@ -21,4 +21,4 @@ def members(request):
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
 
-    return render(request, "pages/members.html", context={"members": page_obj})
+    return render(request, "pages/members/members.html", context={"members": page_obj})
