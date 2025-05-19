@@ -1,3 +1,4 @@
+from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import AbstractUser
 from django.contrib.admin import ModelAdmin
 from django.db import models
@@ -11,6 +12,12 @@ class User(AbstractUser):
     ]
 
     role = models.CharField(max_length=10, choices=ROLE_CHOICES, default="lector")
+
+    def save(self, *args, **kwargs):
+        if self.password and not self.password.startswith("pbkdf2_sha256"):
+            self.password = make_password(self.password)
+
+        super().save(*args, **kwargs)
 
 
 class UserAdmin(ModelAdmin):
@@ -29,7 +36,11 @@ class UserAdmin(ModelAdmin):
     fieldsets = (
         (
             None,
-            {"fields": ("username", "password")},
+            {"fields": ("username", "email")},
+        ),
+        (
+            "Password",
+            {"fields": ("password",), "description": "Raw passwords are not shown."},
         ),
         (
             "Personal info",
@@ -43,5 +54,3 @@ class UserAdmin(ModelAdmin):
         ("Permissions", {"fields": ("is_active", "is_staff", "role")}),
         ("Important dates", {"fields": ("last_login", "date_joined")}),
     )
-
-    readonly_fields = ("password",)
