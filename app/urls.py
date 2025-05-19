@@ -1,17 +1,5 @@
 from django.urls import path
-from .views import (
-    index,
-    books,
-    loans,
-    login,
-    register,
-    logout,
-    members,
-    new_book,
-    new_loan,
-    view_book,
-    edit_book,
-)
+from .views import *
 
 urlpatterns = [
     path("dashboard", index, name="dashboard"),
@@ -26,4 +14,5 @@ urlpatterns = [
     path("register", register, name="register"),
     path("logout", logout, name="logout"),
     path("members", members, name="members"),
+    path("members/<int:member_id>", view_member, name="view_member"),
 ]
