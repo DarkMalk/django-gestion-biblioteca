@@ -5,7 +5,7 @@
          class="p-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">
         {% include "icons/first.html" %}
       </a>
-      <a href="?page={{ items.previous_page_number }}"
+      <a href="?{% for key,value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ items.previous_page_number }}"
          class="p-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">
         {% include "icons/prev.html" %}
       </a>
@@ -19,7 +19,7 @@
     {% endif %}
     <span class="font-bold text-sm">Page {{ items.number }} of {{ items.paginator.num_pages }}</span>
     {% if items.has_next %}
-      <a href="?page={{ items.next_page_number }}"
+      <a href="?{% for key,value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ items.next_page_number }}"
          class="p-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">
         {% include "icons/next.html" %}
       </a>
