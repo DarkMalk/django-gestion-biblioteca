@@ -35,7 +35,9 @@
               <th class="p-4">Name</th>
               <th class="p-4">email</th>
               <th class="p-4">Date Joined</th>
+              <th class="p-4">Role</th>
               <th class="p-4">Status</th>
+              <th class="p-4">View</th>
             </tr>
           </thead>
           <tbody>
@@ -46,6 +48,9 @@
                 <td class="p-4">{{ member.email }}</td>
                 <td class="p-4">{{ member.date_joined|date:"M j, Y" }}</td>
                 <td class="p-4">
+                  <div class="border border-gray-300 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold">{{ member.role }}</div>
+                </td>
+                <td class="p-4">
                   {% if member.is_active %}
                     <div class="border border-green-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-green-700 bg-green-50">
                       Active
@@ -55,6 +60,13 @@
                       Suspended
                     </div>
                   {% endif %}
+                </td>
+                <td class="p-4">
+                  <a href="{% url "view_member" member.id %}"
+                     title="Ir a ver el miembro {{ member.first_name }} {{ member.last_name }}"
+                     class="flex w-fit p-2 hover:bg-black/20 rounded transition-colors">
+                    {% include "icons/eye.html" %}
+                  </a>
                 </td>
               </tr>
             {% endfor %}

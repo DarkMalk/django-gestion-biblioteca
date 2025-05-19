@@ -1,7 +1,7 @@
-from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from ..models import User
 from django.core.paginator import Paginator
+from django.shortcuts import render
+from ...models import User
 
 
 @login_required
