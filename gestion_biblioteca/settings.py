@@ -125,3 +125,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Login URL
 LOGIN_URL = reverse_lazy("login")
+
+# Auth User Model
+
+AUTH_USER_MODEL = "app.User"
