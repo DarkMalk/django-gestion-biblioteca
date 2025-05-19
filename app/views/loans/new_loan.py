@@ -1,7 +1,6 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from django.shortcuts import render
-from ...models import Book, Loan
+from ...models import Book, Loan, User
 from datetime import date, timedelta
 
 

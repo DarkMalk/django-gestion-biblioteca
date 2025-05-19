@@ -1,7 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-from ..models import Book, Loan
-from django.contrib.auth.models import User
+from ..models import Book, Loan, User
 from django.db.models.functions import TruncMonth
 from django.db.models import Count
 
