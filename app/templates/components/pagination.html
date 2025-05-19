@@ -1,7 +1,7 @@
 <nav class="font-xs w-full">
   <div class="w-full flex justify-end items-center gap-2">
     {% if items.has_previous %}
-      <a href="?page=1"
+      <a href="?{% for key,value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page=1"
          class="p-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">
         {% include "icons/first.html" %}
       </a>
@@ -23,7 +23,7 @@
          class="p-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">
         {% include "icons/next.html" %}
       </a>
-      <a href="?page={{ items.paginator.num_pages }}"
+      <a href="?{% for key,value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ items.paginator.num_pages }}"
          class="p-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">
         {% include "icons/last.html" %}
       </a>
