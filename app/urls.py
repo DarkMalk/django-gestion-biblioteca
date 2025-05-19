@@ -15,4 +15,6 @@ urlpatterns = [
     path("logout", logout, name="logout"),
     path("members", members, name="members"),
     path("members/<int:member_id>", view_member, name="view_member"),
+    path("members/<int:member_id>/edit", edit_member, name="edit_member"),
+    path("members/new", new_member, name="new_member"),
 ]
