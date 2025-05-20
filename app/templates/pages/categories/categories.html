@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block title %}
+  <title>Categories Management - Library System</title>
+{% endblock title %}
+{% block body %}
+  <main class="w-[calc(100%-48px)] md:w-[calc(100%-250px)] h-full p-8 gap-4 flex flex-col overflow-y-auto">
+    <h1 class="text-3xl font-bold">Categories Management</h1>
+    <section class="w-full flex flex-col md:flex-row gap-4 border rounded-lg border-gray-300 p-4">
+      <form method="get" class="w-full flex flex-row gap-4">
+        <input type="text"
+               name="search"
+               placeholder="Search by name..."
+               value="{{ request.GET.search }}"
+               class="w-full p-2 border border-gray-300 placeholder:font-bold rounded text-sm outline-gray-400" />
+      </form>
+      <a href="{% url "new_member" %}"
+         title="Ir a página para crear categorías"
+         class="w-full md:w-1/4 border border-gray-300 rounded p-2 text-sm bg-black text-white hover:bg-black/80 hover:cursor-pointer transition-all text-center">
+        Add Category
+      </a>
+    </section>
+    <section class="w-full flex border-2 rounded-lg border-gray-300">
+      <div class="w-full overflow-x-auto">
+        <table class="w-full min-w-[800px] text-sm text-left">
+          <thead class="text-gray-500">
+            <tr class="border-b border-gray-300">
+              <th class="p-4">#</th>
+              <th class="p-4">Name</th>
+              <th class="p-4 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for category in categories %}
+              <tr class="border-b border-gray-300 hover:bg-gray-100">
+                <td class="p-4 font-semibold">{{ category.id }}</td>
+                <td class="p-4">{{ category.name }}</td>
+                <td class="p-4 flex justify-end">
+                  <a href="{% url "edit_category" category.id %}"
+                     title="Ir a editar categoría {{ category.name }}"
+                     class="flex w-fit p-2 hover:bg-black/20 rounded transition-colors">
+                    {% include "icons/edit.html" %}
+                  </a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    {% with categories as items %}
+      {% include "components/pagination.html" %}
+    {% endwith %}
+  </main>
+{% endblock body %}
