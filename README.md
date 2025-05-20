@@ -58,10 +58,32 @@ python manage.py migrate
 
 ## Modo desarrollo
 
+Cargar datos iniciales para desarrollo:
+
+```bash
+python manage.py loaddata initial_data.json
+```
+
 Inicia el servidor de desarrollo:
 
 ```bash
 python manage.py runserver
+```
+
+## Como crear un fixture
+
+El fixture nos sirve para guardar los datos actuales de la DB, muy util para cargar datos de pruebas. En la CLI debes utilizar el siguiente comando, el nombre del archivo puede ser a tu elección.
+
+Comando para un modelo en especifico. Para el ejemplo utilizo el modelo de User
+
+```bash
+python manage.py dumpdata app.User > app/fixtures/[nombre_del_archivo].json
+```
+
+Para un todos los datos de la DB.
+
+```bash
+python manage.py dumpdata > app/fixtures/[nombre_del_archivo].json
 ```
 
 ## Crear super usuario para panel administrativo de Django
