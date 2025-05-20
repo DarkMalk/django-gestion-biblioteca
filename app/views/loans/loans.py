@@ -1,15 +1,15 @@
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from ...models import Loan
 
 
 @login_required
 def loans(request):
-    if request.user.groups.filter(name="bibliotecario").exists():
-        loans = Loan.objects.all()
-    else:
-        loans = Loan.objects.filter(user=request.user)
+    if request.user.role == "lector":
+        return redirect("index")
+
+    loans = Loan.objects.all()
 
     status = request.GET.get("status")
     search = request.GET.get("search")
