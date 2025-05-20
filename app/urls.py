@@ -20,4 +20,7 @@ urlpatterns = [
     path("categories", categories, name="categories"),
     path("categories/new", add_category, name="new_category"),
     path("categories/<int:category_id>/edit", edit_category, name="edit_category"),
+    path("publishers", publishers, name="publishers"),
+    path("publishers/new", add_publisher, name="new_publisher"),
+    path("publishers/<int:publisher_id>/edit", edit_publisher, name="edit_publisher"),
 ]
