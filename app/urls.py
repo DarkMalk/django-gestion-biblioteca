@@ -17,4 +17,7 @@ urlpatterns = [
     path("members/<int:member_id>", view_member, name="view_member"),
     path("members/<int:member_id>/edit", edit_member, name="edit_member"),
     path("members/new", new_member, name="new_member"),
+    path("categories", categories, name="categories"),
+    path("categories/new", add_category, name="new_category"),
+    path("categories/<int:category_id>/edit", edit_category, name="edit_category"),
 ]
