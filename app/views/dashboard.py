@@ -1,12 +1,16 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from ..models import Book, Loan, User
 from django.db.models.functions import TruncMonth
 from django.db.models import Count
 
 
 @login_required
-def index(request):
+def dashboard(request):
+    if request.user.role == "lector":
+        # Redirect a la pagina de todos los libros (pagina principal para lectores)
+        return redirect("index")
+
     books = Book.objects.all()
 
     users_by_month = (

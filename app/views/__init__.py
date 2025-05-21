@@ -1,4 +1,4 @@
-from .index import index
+from .dashboard import dashboard
 from .books import *
 from .loans import *
 from .auth import *
