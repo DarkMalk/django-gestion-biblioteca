@@ -1,10 +1,13 @@
 from django.contrib.auth.decorators import login_required
 from ...models import Author, Category, Editorial, Book
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 @login_required
 def new_book(request):
+    if request.user.role == "lector":
+        return redirect("index")
+
     authors = Author.objects.all()
     categories = Category.objects.all()
     editorials = Editorial.objects.all()
