@@ -38,7 +38,7 @@
           </a>
         {% endif %}
       </div>
-      {% if user.is_authenticated %}
+      {% if user.is_authenticated and user.role != "lector" %}
         <div class="w-full flex flex-col mt-4 max-md:pt-2 max-md:border-t border-gray-300">
           <h2 class="max-md:hidden text-start font-bold mb-2">Management</h2>
           <a href="{% url "members" %}"
