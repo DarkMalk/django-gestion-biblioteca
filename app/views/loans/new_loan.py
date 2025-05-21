@@ -1,11 +1,14 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from ...models import Book, Loan, User
 from datetime import date, timedelta
 
 
 @login_required
 def new_loan(request):
+    if request.user.role == "lector":
+        return redirect("index")
+
     min_due_date = date.today() + timedelta(days=1)
     max_due_date = date.today() + timedelta(days=7)
 

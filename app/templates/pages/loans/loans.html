@@ -24,10 +24,12 @@
                   {% if request.GET.status == "overdue" %}selected{% endif %}>Overdue</option>
         </select>
       </form>
-      <a href="{% url "new_loan" %}"
-         class="w-full lg:w-1/4 border border-gray-300 rounded p-2 text-sm bg-black text-white hover:bg-black/80 hover:cursor-pointer transition-all text-center">
-        Add Loan
-      </a>
+      {% if request.user.is_authenticated and request.user.role != "lector" %}
+        <a href="{% url "new_loan" %}"
+           class="w-full lg:w-1/4 border border-gray-300 rounded p-2 text-sm bg-black text-white hover:bg-black/80 hover:cursor-pointer transition-all text-center">
+          Add Loan
+        </a>
+      {% endif %}
     </section>
     <section class="w-full flex gap-4 border-2 rounded-lg border-gray-300">
       <div class="w-full overflow-x-auto">
