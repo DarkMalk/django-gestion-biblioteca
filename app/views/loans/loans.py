@@ -7,9 +7,9 @@ from ...models import Loan
 @login_required
 def loans(request):
     if request.user.role == "lector":
-        return redirect("index")
-
-    loans = Loan.objects.all()
+        loans = Loan.objects.filter(user=request.user)
+    else:
+        loans = Loan.objects.all()
 
     status = request.GET.get("status")
     search = request.GET.get("search")
