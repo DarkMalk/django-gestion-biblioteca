@@ -12,7 +12,7 @@
     <nav class="w-full h-full flex flex-col items-center justify-start text-center md:px-6 overflow-y-auto">
       <div class="w-full flex flex-col">
         <h2 class="max-md:hidden font-bold text-start mb-2">Principal</h2>
-        {% if user.is_authenticated %}
+        {% if user.is_authenticated and user.role != "lector" %}
           <a href="{% url "dashboard" %}"
              rel="noopener noreferrer"
              title="Ir a pagina principal"
