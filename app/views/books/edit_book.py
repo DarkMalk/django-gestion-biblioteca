@@ -5,6 +5,9 @@ from django.shortcuts import render, redirect
 
 @login_required
 def edit_book(request, book_id):
+    if request.user.role == "lector":
+        return redirect("index")
+
     book = Book.objects.filter(id=book_id).first()
     categories = Category.objects.all()
     authors = Author.objects.all()
