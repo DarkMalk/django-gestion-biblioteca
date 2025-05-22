@@ -35,6 +35,7 @@ def new_loan(request):
                 {**context, "error": "All fields are required."},
             )
 
+        # Verificar si un usuario ya tiene un prestamo activo
         if Loan.objects.filter(status="active", user_id=user_id).exists():
             return render(
                 request,
@@ -42,6 +43,16 @@ def new_loan(request):
                 {
                     **context,
                     "error": "User already has an active loan.",
+                },
+            )
+
+        if Book.objects.get(id=book_id).stock <= 0:
+            return render(
+                request,
+                "pages/loans/new_loan.html",
+                {
+                    **context,
+                    "error": "Book is out of stock.",
                 },
             )
 
@@ -56,12 +67,16 @@ def new_loan(request):
             )
 
         try:
+            book = Book.objects.get(id=book_id)
+            book.stock -= 1
+
             new_loan = Loan.objects.create(
                 book_id=book_id,
                 user_id=user_id,
                 due_date=due_date,
             )
 
+            book.save()
             new_loan.save()
 
             return render(
