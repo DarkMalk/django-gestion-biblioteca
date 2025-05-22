@@ -50,7 +50,9 @@
                   required
                   class="border border-gray-300 px-3 py-2 rounded-md font-normal outline-gray-500">
             <option value="" selected>Select a book</option>
-            {% for book in books %}<option value="{{ book.id }}">{{ book.title }} by {{ book.author }}</option>{% endfor %}
+            {% for book in books %}
+              <option value="{{ book.id }}">{{ book.title }} by {{ book.author }} - stock: {{ book.stock }}</option>
+            {% endfor %}
           </select>
         </label>
         <label class="flex flex-col gap-2 font-medium md:col-span-3">
