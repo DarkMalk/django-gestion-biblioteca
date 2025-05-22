@@ -8,8 +8,8 @@
       <h1 class="font-bold max-md:hidden">Library System</h1>
     </a>
   </div>
-  <div class="w-full h-full flex flex-col gap-4 justify-center items-center">
-    <nav class="w-full h-full flex flex-col items-center justify-start text-center md:px-6 overflow-y-auto">
+  <div class="w-full h-full flex flex-col gap-4 justify-center items-center overflow-y-auto">
+    <nav class="w-full h-full flex flex-col items-center justify-start text-center md:px-6">
       <div class="w-full flex flex-col">
         <h2 class="max-md:hidden font-bold text-start mb-2">Principal</h2>
         {% if user.is_authenticated and user.role != "lector" %}
