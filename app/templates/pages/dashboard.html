@@ -127,13 +127,23 @@
       data: {
         labels: Object.keys(dataLibraryActivity).map(key => key),
         datasets: [{
-          label: "Loans",
-          data: Object.values(dataLibraryActivity).map(value => value.loans),
+          label: "Total Loans",
+          data: Object.values(dataLibraryActivity).map(value => value.total),
           borderWidth: 1,
           backgroundColor: '#7D79D2'
         },{
-          label: "returned",
+          label: "Returned",
           data: Object.values(dataLibraryActivity).map(value => value.returned),
+          borderWidth: 1,
+          backgroundColor: '#2b7fff'
+        },{
+          label: "Overdue",
+          data: Object.values(dataLibraryActivity).map(value => value.overdue),
+          borderWidth: 1,
+          backgroundColor: '#fb2c36'
+        },{
+          label: "Active",
+          data: Object.values(dataLibraryActivity).map(value => value.active),
           borderWidth: 1,
           backgroundColor: '#77C392'
         }],
