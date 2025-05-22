@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+{% block title %}
+  <title>Loan {{ loan.book.title }} by {{ loan.user.username }} - Library System</title>
+{% endblock title %}
+{% block body %}
+  <main class="w-[calc(100%-48px)] md:w-[calc(100%-250px)] h-full p-8 flex flex-col gap-4 overflow-y-auto">
+    <div class="container mx-auto p-8 border border-gray-300 rounded-lg flex gap-4 items-center justify-between">
+      <div class="flex flex-row items-center gap-4">
+        <a href="{% url "loans" %}"
+           title="Volver a pagina de todos los prestamos"
+           class="h-12 w-12 p-2 border border-gray-300 rounded flex justify-center items-center hover:bg-gray-100 transition-colors">
+          {% include "icons/arrow-left.html" %}
+        </a>
+        <div class="flex flex-col gap-0.5">
+          <h1 class="text-2xl md:text-3xl font-bold">{{ loan.book.title }} by {{ loan.user.username }}</h1>
+          <p class="flex flex-row gap-2 items-center">
+            <span class="text-gray-500">Loan #{{ loan.id }}</span>
+            {% if loan.status == "returned" %}
+              <span class=" border border-blue-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-blue-700 bg-blue-50">
+                {{ loan.status }}
+              </span>
+            {% endif %}
+            {% if loan.status == "active" %}
+              <span class=" border border-green-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-green-700 bg-green-50">
+                {{ loan.status }}
+              </span>
+            {% endif %}
+            {% if loan.status == "overdue" %}
+              <span class=" border border-red-200 px-2.5 py-0.5 rounded-full w-fit text-xs font-bold text-red-700 bg-red-50">
+                {{ loan.status }}
+              </span>
+            {% endif %}
+          </p>
+        </div>
+      </div>
+      {% if request.user.is_authenticated and request.user.role != "lector" %}
+        <div class="flex flex-row gap-4">
+          <a href="{% url "edit_loan" loan.id %}"
+             title="Ir a editar el prestamo {{ loan.book.title }} por {{ loan.user.username }}"
+             class="h-12 px-4 flex text-center items-center justify-center bg-black hover:bg-black/80 transition-colors font-semibold rounded text-white cursor-pointer">
+            Edit Loan
+          </a>
+        </div>
+      {% endif %}
+    </div>
+    <section class="container mx-auto flex flex-col gap-4 border border-gray-300 rounded-lg p-8">
+      <h2 class="font-semibold text-2xl flex flex-row gap-2 items-center pb-6 border-b border-gray-300">
+        {% include "icons/package.html" %}
+        Loan Information
+      </h2>
+      <div class="flex flex-col">
+        <div id="book_details" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex flex-col gap-2">
+            <h3 class="text-lg font-semibold flex gap-2 items-center">
+              {% include "icons/book.html" %}
+              Book Details
+            </h3>
+            <p class="font-medium">{{ loan.book.title }}</p>
+            <p class="text-gray-500 text-sm">Author: {{ loan.book.author.name }}</p>
+            <p class="text-gray-500 text-sm">ISBN: {{ loan.book.isbn }}</p>
+          </div>
+          <div id="user_details" class="flex flex-col gap-2">
+            <h3 class="text-lg font-semibold flex gap-2 items-center">
+              {% include "icons/users.html" %}
+              User Details
+            </h3>
+            <p class="font-medium">{{ loan.user.first_name }} {{ loan.user.last_name }}</p>
+            <p class="text-gray-500 text-sm">Username: {{ loan.user.username }}</p>
+            <p class="text-gray-500 text-sm">Email: {{ loan.user.email }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-gray-300">
+        <div class="flex flex-col gap-2">
+          <h3 class="font-medium flex gap-2 items-center">
+            {% include "icons/calendar.html" %}
+            Checkout Date
+          </h3>
+          <p>{{ loan.request_date|date:"M j, Y" }}</p>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-medium flex gap-2 items-center">
+            {% include "icons/calendar.html" %}
+            Due Date
+          </h3>
+          <p>{{ loan.due_date|date:"M j, Y" }}</p>
+          {% if loan.status != "returned" %}
+            <p>
+              {% if remaining_days > 0 %}<span class="text-green-500">{{ remaining_days }} days remaining</span>{% endif %}
+              {% if remaining_days == 0 %}<span class="text-yellow-500">Due today</span>{% endif %}
+              {% if remaining_days < 0 %}<span class="text-red-500">{{ remaining_days }} days overdue</span>{% endif %}
+            </p>
+          {% endif %}
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-medium flex gap-2 items-center">
+            {% include "icons/calendar.html" %}
+            Return Date
+          </h3>
+          {% if loan.return_date %}
+            <p>{{ loan.return_date|date:"M j, Y" }}</p>
+          {% else %}
+            <p>Not returned yet</p>
+          {% endif %}
+        </div>
+      </div>
+      {% if request.user.is_authenticated and request.user.role != "lector" and loan.status != "returned" %}
+        <div class="flex flex-col gap-2 pt-4 border-t border-gray-300">
+          <h3 class="font-medium flex gap-2 items-center">
+            {% include "icons/package.html" %}
+            Return Book
+          </h3>
+          <form method="post"
+                action="{% url "return_loan" loan.id %}"
+                class="flex flex-col md:flex-row gap-4">
+            {% csrf_token %}
+            <input type="date"
+                   name="return_date"
+                   min="{{ today|date:"Y-m-d" }}"
+                   max="{{ today|date:"Y-m-d" }}"
+                   required
+                   class="w-full border border-gray-300 px-3 py-2 rounded-md font-normal outline-gray-500" />
+            <button type="submit"
+                    class="h-12 px-4 md:w-46 w-full flex flex-row gap-2 items-center justify-center bg-black hover:bg-black/80 transition-colors font-semibold rounded text-white cursor-pointer">
+              Return Book
+            </button>
+          </form>
+        </div>
+      {% endif %}
+    </section>
+  </main>
+{% endblock body %}
