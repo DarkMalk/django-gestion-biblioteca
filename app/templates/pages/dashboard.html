@@ -197,7 +197,7 @@
     new Chart(ctxTotalStock, {
       type: "bar",
       data: {
-        labels: Object.values(dataTotalStock).map(value => (`${value.title} (${value.author})`)),
+        labels: Object.values(dataTotalStock).map(value => value.title),
         datasets: [{
           label: "Total stock",
           data: Object.values(dataTotalStock).map(value => value.total_stock),
