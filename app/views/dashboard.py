@@ -6,6 +6,7 @@ from ..utils import (
     books_per_category,
     new_members_last_seven_months as new_members_utils,
     library_activity_last_seven_months as library_activity_utils,
+    total_stock_per_book,
 )
 
 
@@ -34,6 +35,7 @@ def dashboard(request):
     books_by_category = books_per_category(books)
     new_members_last_seven_months = new_members_utils(month_labels, users)
     library_activity_last_seven_months = library_activity_utils(month_labels, loans)
+    total_stock = total_stock_per_book(books, loans)
 
     data = {
         "total_books": total_books,
@@ -43,6 +45,7 @@ def dashboard(request):
         "overdue_loans": overdue_loans,
         "new_members_last_seven_months": new_members_last_seven_months,
         "library_activity_last_seven_months": library_activity_last_seven_months,
+        "total_stock": total_stock,
     }
 
     return render(request, "pages/dashboard.html", context=data)

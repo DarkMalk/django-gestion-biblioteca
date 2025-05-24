@@ -76,12 +76,19 @@
         </header>
         <canvas id="graphic-library-activity"></canvas>
       </article>
-      <article class="w-full flex flex-col gap-2 p-6 border border-gray-300 rounded lg:col-span-2">
+      <article class="w-full flex flex-col gap-2 p-6 border border-gray-300 rounded">
         <header class="w-full flex flex-col gap-2">
           <h1 class="text-2xl font-bold">Books by Category</h1>
           <p class="text-sm text-gray-500">Distribution of books across categories</p>
         </header>
         <canvas id="graphic-books-by-category"></canvas>
+      </article>
+      <article class="w-full flex flex-col gap-2 p-6 border border-gray-300 rounded">
+        <header class="w-full flex flex-col gap-2">
+          <h1 class="text-2xl font-bold">Total Category per Book</h1>
+          <p class="text-sm text-gray-500">Distribution stock per books</p>
+        </header>
+        <canvas id="graphic-total_stock"></canvas>
       </article>
     </section>
   </main>
@@ -92,10 +99,14 @@
     const dataNewMembers = {{ new_members_last_seven_months|safe }}
     const dataLibraryActivity = {{ library_activity_last_seven_months|safe }}
     const dataBooksByCategory = {{ books_by_category|safe }}
+    const dataTotalStock = {{ total_stock|safe }}
+
+    console.log(dataTotalStock)
     
     const ctxNewMembers = $("#graphic-new-members").getContext("2d")
     const ctxLibraryActivity = $("#graphic-library-activity").getContext("2d")
     const ctxBooksByCategory = $("#graphic-books-by-category").getContext("2d")
+    const ctxTotalStock = $("#graphic-total_stock").getContext("2d")
 
     new Chart(ctxNewMembers, {
       type: 'bar',
@@ -180,6 +191,24 @@
             position: 'bottom'
           }
         }
+      }
+    })
+
+    new Chart(ctxTotalStock, {
+      type: "bar",
+      data: {
+        labels: Object.values(dataTotalStock).map(value => (`${value.title} (${value.author})`)),
+        datasets: [{
+          label: "Total stock",
+          data: Object.values(dataTotalStock).map(value => value.total_stock),
+          borderWidth: 1,
+          backgroundColor: '#7D79D2'
+        },{
+          label: "Available stock",
+          data: Object.values(dataTotalStock).map(value => value.available_stock),
+          borderWidth: 1,
+          backgroundColor: '#2b7fff'
+        }]
       }
     })
   </script>
