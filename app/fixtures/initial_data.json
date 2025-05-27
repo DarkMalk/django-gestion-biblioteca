@@ -585,6 +585,45 @@
     }
   },
   {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2025-05-22T00:31:46.667Z",
+      "user": 3,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "Loan object (3)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Due date\", \"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2025-05-22T00:32:37.964Z",
+      "user": 3,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "Loan object (3)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2025-05-22T00:32:52.504Z",
+      "user": 3,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Loan object (1)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Due date\", \"Status\"]}}]"
+    }
+  },
+  {
     "model": "auth.permission",
     "pk": 1,
     "fields": { "name": "Can add log entry", "content_type": 1, "codename": "add_logentry" }
@@ -817,6 +856,38 @@
   { "model": "contenttypes.contenttype", "pk": 11, "fields": { "app_label": "app", "model": "loan" } },
   {
     "model": "sessions.session",
+    "pk": "04afuanxholzewgxz10vpoaaqi49fh8i",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlkbrz9rSnrOYK0_wQHkSHFSIe4OkVJA-2bmvUTgba1h62UJUxZngeL0u0VOj9J2kO_cbrNMc1uXKcpdkQft8jrn8rwc7t9B5V6_dUTjNAArYtKKEo3I3oAHy5gwRpMLWI-WxuK9Vo5d1joOZcjKkAYn3h_CYDbp:1uHAEP:_oSAPnHnYyr6sTsGFwOQ0oDOIhq5iDIaDJvYay4WLHU",
+      "expire_date": "2025-06-02T23:49:17.599Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "hg4d4upspu1x619qfrmqssujvigdxhk5",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlkbrz9rSnrOYK0_wQHkSHFSIe4OkVJA-2bmvUTgba1h62UJUxZngeL0u0VOj9J2kO_cbrNMc1uXKcpdkQft8jrn8rwc7t9B5V6_dUTjNAArYtKKEo3I3oAHy5gwRpMLWI-WxuK9Vo5d1joOZcjKkAYn3h_CYDbp:1uK3wc:Bl21e324BzSooll-tyRg5MLnFUONoo900KwX09Hxtw0",
+      "expire_date": "2025-06-10T23:42:54.658Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "izzwa00mqtbkptffwaoasnvfk3aa0ai1",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlkbrz9rSnrOYK0_wQHkSHFSIe4OkVJA-2bmvUTgba1h62UJUxZngeL0u0VOj9J2kO_cbrNMc1uXKcpdkQft8jrn8rwc7t9B5V6_dUTjNAArYtKKEo3I3oAHy5gwRpMLWI-WxuK9Vo5d1joOZcjKkAYn3h_CYDbp:1uHqnJ:Czp6H2g9vv9cc23ej9h3ImfLoHgrSdlauUQxeBghUgo",
+      "expire_date": "2025-06-04T21:16:09.192Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "me1gokha0vkgyq90lqudoaveupbcv044",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSE4DFBcuvcbyAwPqRqalHZl_HfbpAvd3nPOfYtA61LD2vMcxiQuworT78YUn7ntID2o3ScZp7bMI8tdkQft8jal_Loe7t9BpV632qCHAQgAIxbtQBFhHsh69tEVo3xkVzxqLITEbHTSqKJNZDZyBhafL9VfN_0:1uIeE3:yNoH_eHwWdMPwKyRY5qUDWdkuQxzeTPE1Bs9JYEHeKE",
+      "expire_date": "2025-06-07T02:03:03.212Z"
+    }
+  },
+  {
+    "model": "sessions.session",
     "pk": "s7h76d47z9b6lcez8zmxpiuumtequpi7",
     "fields": {
       "session_data": ".eJxVjDsOwjAQBe_iGlkbrz9rSnrOYK0_wQHkSHFSIe4OkVJA-2bmvUTgba1h62UJUxZngeL0u0VOj9J2kO_cbrNMc1uXKcpdkQft8jrn8rwc7t9B5V6_dUTjNAArYtKKEo3I3oAHy5gwRpMLWI-WxuK9Vo5d1joOZcjKkAYn3h_CYDbp:1uGqMV:Wd2XmpTE7o0lJsa5SPnMo23CWiVJ0B7Q28k80JHbHX4",
@@ -891,15 +962,11 @@
     "pk": 10,
     "fields": { "name": "Poesía y Drama", "created_at": "2025-05-19T02:39:31.788Z" }
   },
+  { "model": "app.category", "pk": 11, "fields": { "name": "Fan Fiction", "created_at": "2025-05-20T03:51:09.419Z" } },
   {
     "model": "app.editorial",
     "pk": 1,
-    "fields": {
-      "name": "Penguin Random House",
-      "address": null,
-      "email": null,
-      "created_at": "2025-05-19T02:42:17.582Z"
-    }
+    "fields": { "name": "Penguin Random House", "address": "", "email": "", "created_at": "2025-05-19T02:42:17.582Z" }
   },
   {
     "model": "app.editorial",
@@ -957,6 +1024,21 @@
     "fields": { "name": "Debolsillo", "address": null, "email": null, "created_at": "2025-05-19T02:47:05.245Z" }
   },
   {
+    "model": "app.editorial",
+    "pk": 13,
+    "fields": { "name": "Signet Classics", "address": "", "email": "", "created_at": "2025-05-20T04:33:42.214Z" }
+  },
+  {
+    "model": "app.editorial",
+    "pk": 14,
+    "fields": {
+      "name": "Grand Central Publishing",
+      "address": "1290 Avenue of the Americas, New York, USA",
+      "email": "contact@grandcentralpublishing.com",
+      "created_at": "2025-05-20T04:34:31.284Z"
+    }
+  },
+  {
     "model": "app.book",
     "pk": 1,
     "fields": {
@@ -993,7 +1075,7 @@
       "isbn": "978-030774365",
       "publisher": 3,
       "category": 2,
-      "stock": 18,
+      "stock": 19,
       "active": true,
       "created_at": "2025-05-19T02:45:16.052Z"
     }
@@ -1007,7 +1089,7 @@
       "isbn": "978-061826027",
       "publisher": 7,
       "category": 3,
-      "stock": 12,
+      "stock": 11,
       "active": true,
       "created_at": "2025-05-19T02:45:37.522Z"
     }
@@ -1077,7 +1159,7 @@
       "isbn": "978-030774476",
       "publisher": 1,
       "category": 1,
-      "stock": 11,
+      "stock": 10,
       "active": true,
       "created_at": "2025-05-19T02:48:22.575Z"
     }
@@ -1139,11 +1221,71 @@
     }
   },
   {
+    "model": "app.loan",
+    "pk": 1,
+    "fields": {
+      "book": 1,
+      "user": 5,
+      "request_date": "2025-05-19",
+      "due_date": "2025-05-20",
+      "return_date": "2025-05-21",
+      "status": "returned"
+    }
+  },
+  {
+    "model": "app.loan",
+    "pk": 2,
+    "fields": {
+      "book": 13,
+      "user": 9,
+      "request_date": "2025-05-20",
+      "due_date": "2025-05-24",
+      "return_date": "2025-05-21",
+      "status": "returned"
+    }
+  },
+  {
+    "model": "app.loan",
+    "pk": 3,
+    "fields": {
+      "book": 6,
+      "user": 6,
+      "request_date": "2025-05-21",
+      "due_date": "2025-05-24",
+      "return_date": "2025-05-21",
+      "status": "returned"
+    }
+  },
+  {
+    "model": "app.loan",
+    "pk": 4,
+    "fields": {
+      "book": 4,
+      "user": 6,
+      "request_date": "2025-05-21",
+      "due_date": "2025-05-31",
+      "return_date": null,
+      "status": "active"
+    }
+  },
+  {
+    "model": "app.loan",
+    "pk": 5,
+    "fields": {
+      "book": 9,
+      "user": 5,
+      "request_date": "2025-05-22",
+      "due_date": "2025-05-29",
+      "return_date": null,
+      "status": "active"
+    }
+  },
+  {
     "model": "app.user",
     "pk": 3,
     "fields": {
       "password": "pbkdf2_sha256$1000000$7OMKrCOg53mBQ1rdkDNTD5$/8x+rZEzWRqpenK6RxdP902pyFBYA/B/rrABvBmkeew=",
-      "last_login": "2025-05-19T02:36:19.107Z",
+      "last_login": "2025-05-27T23:42:54.657Z",
       "is_superuser": true,
       "username": "admin",
       "first_name": "Admin",
@@ -1162,7 +1304,7 @@
     "pk": 5,
     "fields": {
       "password": "pbkdf2_sha256$1000000$IEFJRwC07hD1xbSpOPmZYK$vFvra11sHKlna9btogWYEvjuVdmslbNw89gbw0IV/EM=",
-      "last_login": "2025-05-19T02:26:50.881Z",
+      "last_login": "2025-05-24T02:02:47.321Z",
       "is_superuser": false,
       "username": "agarcia",
       "first_name": "Ana",
@@ -1181,7 +1323,7 @@
     "pk": 6,
     "fields": {
       "password": "pbkdf2_sha256$1000000$J1xAKJNq77xqSeTNsaYLeo$IbGNvu3sYdj+IIVR9lwq1KJpbK9HmuFghykF+9+tCvw=",
-      "last_login": null,
+      "last_login": "2025-05-24T02:03:03.211Z",
       "is_superuser": false,
       "username": "lmartinez",
       "first_name": "Luis",
