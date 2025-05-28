@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 from django.urls import reverse_lazy
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +31,7 @@ SECRET_KEY = "django-insecure-pc3%e4vhwre95c=e2zcz7-7%!(hcpuj*l-br!gy+i%ps9xbygf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "0.0.0.0"]
 
 
 # Application definition
@@ -74,13 +79,23 @@ WSGI_APPLICATION = "gestion_biblioteca.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+# Database default with SQLite
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+CONFIG_DATABASE_MYSQL = {
+    "NAME": os.getenv("DB_NAME", "gestion_biblioteca"),
+    "USER": os.getenv("DB_USER", "root"),
+    "PASSWORD": os.getenv("DB_PASSWORD", ""),
+    "HOST": os.getenv("DB_HOST", "127.0.0.1"),
+    "PORT": os.getenv("DB_PORT", 3306),
 }
 
+DATABASES = {"default": {"ENGINE": "django.db.backends.mysql", **CONFIG_DATABASE_MYSQL}}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
