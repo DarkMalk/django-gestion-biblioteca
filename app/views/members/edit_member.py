@@ -54,8 +54,6 @@ def edit_member(request, member_id):
             member.last_name = last_name
             member.is_active = active
 
-            print(member.is_active)
-
             # Si el usuario autenticado es bibliotecario, no puede cambiar a un rol que no sea lector. -> en UI se encuentra bloqueado el select para usuarios que no sean admin
             if (
                 request.user.role == "librarian"
@@ -78,7 +76,7 @@ def edit_member(request, member_id):
 
             member.role = role
 
-            if password:
+            if password and password != "":
                 member.password = password
 
             member.save()
