@@ -5,7 +5,6 @@ RUN apt-get update && apt-get install -y \
   default-libmysqlclient-dev build-essential pkg-config cron
 
 RUN service cron start
-RUN service cron status
 
 WORKDIR /app
 COPY . /app
