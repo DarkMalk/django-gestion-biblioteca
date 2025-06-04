@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block title %}
+  <title>Reserve by Lector | Library System</title>
+{% endblock title %}
+{% block body %}
+  <main class="w-[calc(100%-48px)] md:w-[calc(100%-250px)] h-full p-8 flex flex-col gap-4 overflow-y-auto">
+    <div class="container mx-auto p-8 border border-gray-300 rounded-lg flex gap-4 items-center justify-between">
+      <div class="flex flex-row items-center gap-4">
+        <a href="{% url "books" %}"
+           title="Volver a pagina de todos los libros"
+           class="h-12 w-12 p-2 border border-gray-300 rounded flex justify-center items-center hover:bg-gray-100 transition-colors">
+          {% include "icons/arrow-left.html" %}
+        </a>
+        <div class="flex flex-col gap-0.5">
+          <h1 class="text-2xl md:text-3xl font-bold">Reserve a book</h1>
+          <p class="text-sm font-semibold text-gray-500">Register new reserve a book</p>
+        </div>
+      </div>
+      <div class="flex flex-row gap-4">
+        <a href="{% url "books" %}"
+           title="Volver a pagina de todos los libros"
+           class="h-12 px-4 border border-gray-300 rounded flex justify-center items-center font-semibold hover:bg-gray-100 transition-colors">Cancel</a>
+        <button type="submit"
+                form="reserve_by_lector"
+                {% if disabled_button %}disabled{% endif %}
+                class="h-12 px-4 bg-black hover:bg-black/80 transition-colors font-semibold rounded text-white cursor-pointer disabled:opacity-80 disabled:cursor-not-allowed">
+          {% if book.stock <= 0 %}
+            Out of stock
+          {% else %}
+            Reserve Book
+          {% endif %}
+        </button>
+      </div>
+    </div>
+    <section class="container mx-auto flex flex-col gap-4 border border-gray-300 rounded-lg p-8">
+      <h2 class="font-semibold text-2xl flex flex-row gap-2 items-center pb-6 border-b border-gray-300">
+        {% include "icons/package.html" %}
+        Reserve Details
+      </h2>
+      <div id="error"
+           class="{% if not error %}hidden{% endif %} border border-red-200 px-4 py-2 w-full rounded-lg text-xs font-bold text-red-700 bg-red-50 transition text-center">
+        {{ error }}
+      </div>
+      <div id="success"
+           class="{% if not success %}hidden{% endif %} border border-green-200 px-4 py-2 w-full rounded-lg text-xs font-bold text-green-700 bg-green-50 transition text-center">
+        {{ success }}
+      </div>
+      <form id="reserve_by_lector"
+            method="post"
+            class="grid grid-cols-1 md:grid-cols-6 gap-4 w-full">
+        {% csrf_token %}
+        <label class="flex flex-col gap-2 font-medium md:col-span-3">
+          Book
+          <input name="book"
+                 type="text"
+                 value="{{ book.title }} by {{ book.author }}"
+                 disabled
+                 required
+                 class="border border-gray-300 px-3 py-2 rounded-md font-normal outline-gray-500 text-gray-500" />
+        </label>
+        <label class="flex flex-col gap-2 font-medium md:col-span-3">
+          User
+          <input name="user"
+                 type="text"
+                 value="{{ user.username }} ({{ user.first_name }} {{ user.last_name }})"
+                 disabled
+                 required
+                 class="border border-gray-300 px-3 py-2 rounded-md font-normal outline-gray-500 text-gray-500" />
+        </label>
+        <label class="flex flex-col gap-2 font-medium md:col-span-3">
+          Checkout Date
+          <input type="date"
+                 name="checkout_date"
+                 disabled
+                 value="{{ today|date:"Y-m-d" }}"
+                 class="border border-gray-300 px-3 py-2 rounded-md font-normal outline-gray-500 text-gray-500" />
+        </label>
+        <label class="flex flex-col gap-2 font-medium md:col-span-3">
+          Due Date
+          <input type="date"
+                 name="due_date"
+                 min="{{ min_due_date|date:"Y-m-d" }}"
+                 max="{{ max_due_date|date:"Y-m-d" }}"
+                 required
+                 class="border border-gray-300 px-3 py-2 rounded-md font-normal outline-gray-500" />
+        </label>
+      </form>
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-row items-center gap-2 pb-4 border-b border-gray-300">
+          {% include "icons/info.html" %}
+          <h3 class="text-2xl font-medium">Info</h3>
+        </div>
+        <p class="text-gray-500">
+          This form is enabled so that you can reserve a book, once approved you must go to the store to pick up the book.
+        </p>
+        <p class="text-gray-500">
+          If you have not withdrawn the book before the due date, the book will be recorded as returned.
+        </p>
+      </div>
+    </section>
+  </main>
+{% endblock body %}
