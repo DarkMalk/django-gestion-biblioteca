@@ -1,0 +1,6 @@
+__pycache__/
+.env
+.env_example
+*.sqlite3
+.node_modules/
+.env/
