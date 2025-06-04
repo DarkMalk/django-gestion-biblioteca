@@ -16,3 +16,4 @@ regex==2024.11.6
 six==1.17.0
 sqlparse==0.5.3
 tqdm==4.67.1
+whitenoise==6.9.0
