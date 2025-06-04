@@ -1,12 +1,11 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect
 from django.http import JsonResponse
-from ...models import Loan
+from ...models import Loan, Book
 
 
 @login_required
 def return_loan(request, loan_id):
-    # TODO: al devolver un libro, se debe reintegrar al stock de libros
     if request.user.role == "lector":
         return redirect("index")
 
@@ -24,10 +23,18 @@ def return_loan(request, loan_id):
     if not return_date:
         return JsonResponse({"message": "Return date is required"})
 
+    book = Book.objects.filter(id=loan.book.id).first()
+
+    if not book:
+        return JsonResponse({"message": "Book not found"})
+
     try:
         loan.return_date = return_date
         loan.status = "returned"
+        book.stock += 1
+
         loan.save()
+        book.save()
         return redirect("view_loan", loan_id)
     except Exception as e:
         return JsonResponse({"message": "Error returning loan"})
