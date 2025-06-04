@@ -14,6 +14,8 @@ RUN pip install gunicorn
 RUN python manage.py collectstatic --noinput
 
 # Run database migrations
+RUN python manage.py makemigrations app
+RUN python manage.py migrate app
 RUN python manage.py migrate
 
 # Command for running cron jobs
