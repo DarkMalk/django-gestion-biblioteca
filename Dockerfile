@@ -4,6 +4,9 @@ FROM python:3.12-slim
 RUN apt-get update && apt-get install -y \
   default-libmysqlclient-dev build-essential pkg-config cron
 
+RUN service cron start
+RUN service cron status
+
 WORKDIR /app
 COPY . /app
 
@@ -20,6 +23,7 @@ RUN python manage.py migrate
 
 # Command for running cron jobs
 RUN python manage.py crontab add
+RUN crontab -l
 
 # Expose the port the app runs on
 EXPOSE 8000
