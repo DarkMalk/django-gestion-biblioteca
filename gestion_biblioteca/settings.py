@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "app.apps.AppConfig",
+    "django_crontab",
 ]
 
 MIDDLEWARE = [
@@ -144,3 +145,9 @@ LOGIN_URL = reverse_lazy("login")
 # Auth User Model
 
 AUTH_USER_MODEL = "app.User"
+
+# Cron Jobs Configuration
+# Configuración ideal cada 24 horas para verificar libros vencidos
+
+# Ejecutándose cada minuto para pruebas
+CRONJOBS = [("* * * * *", "app.tasks.check_overdue_loans")]
