@@ -2,6 +2,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.db import models
 from ..models import Book
+from datetime import datetime
 
 
 class Loan(models.Model):
@@ -13,7 +14,7 @@ class Loan(models.Model):
 
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    request_date = models.DateField(auto_now_add=True)
+    request_date = models.DateField(default=datetime.today)
     due_date = models.DateField()
     return_date = models.DateField(null=True, blank=True)
     status = models.CharField(
