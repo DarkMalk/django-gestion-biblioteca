@@ -115,3 +115,29 @@ El script `styles:watch` nos permite realizar una build a medida que vayamos des
 ```bash
 node --run styles:watch
 ```
+
+# Crontab con Django
+
+Para verificar los prestamos que se están venciendo, hemos instalado una dependencia llamada django-crontab, el cual nos permite gestionar tareas cron con python y django, generando asi una integración más simple.
+
+Para ello tenemos 3 comandos de utilidad que nos permitirán ajustar las tareas cron.
+
+**NOTA:** Considerar que cron no esta disponible para Windows, por lo que considera utilizar `WSL` que es el subsistema de Linux en Windows al momento de desarrollar en la aplicación.
+
+Añadir las tareas cron configuradas en el archivo `settings.py` en el apartado `CRONTABS`.
+
+```bash
+python manage.py crontab add
+```
+
+Listar las tareas cron añadidas previamente.
+
+```bash
+python manage.py crontab show
+```
+
+Eliminar las tareas cron.
+
+```bash
+python manage.py crontab remove
+```
