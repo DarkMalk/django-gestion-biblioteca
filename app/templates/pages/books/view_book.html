@@ -20,8 +20,17 @@
         <div class="flex flex-row gap-4">
           <a href="{% url "edit_book" book.id %}"
              title="Ir a editar el libro {{ book.title }}"
-             class="h-12 px-4 flex items-center justify-center bg-black hover:bg-black/80 transition-colors font-semibold rounded text-white cursor-pointer">
+             class="h-12 px-4 flex items-center justify-center bg-black hover:bg-black/80 transition-colors font-semibold rounded text-white cursor-pointer text-center">
             Edit Book
+          </a>
+        </div>
+      {% endif %}
+      {% if request.user.role == "lector" or not request.user.is_authenticated %}
+        <div class="flex flex-row gap-4">
+          <a href="{% url "reserve_by_lector" book.id %}"
+             title="Ir a reservar el libro {{ book.title }}"
+             class="h-12 px-4 flex items-center justify-center bg-black hover:bg-black/80 transition-colors font-semibold rounded text-white cursor-pointer text-center">
+            Reserve a book
           </a>
         </div>
       {% endif %}
