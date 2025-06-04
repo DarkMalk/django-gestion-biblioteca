@@ -3,6 +3,7 @@ click==8.1.8
 colorama==0.4.6
 cssbeautifier==1.15.4
 Django==5.2
+django-crontab==0.7.1
 djlint==1.36.4
 EditorConfig==0.17.0
 jsbeautifier==1.15.4
