@@ -103,7 +103,8 @@
           Status
           <select required
                   value="{{ loan.status }}"
-                  class="border border-gray-300 px-3 py-2 rounded-md font-normal outline-gray-500">
+                  disabled
+                  class="border border-gray-300 px-3 py-2 rounded-md font-normal outline-gray-500 text-gray-500">
             {% for value, choice in loan.STATUS_CHOICES %}
               <option value={{ value }} {% if loan.status == value %}selected{% endif %}>{{ choice }}
               </option>
