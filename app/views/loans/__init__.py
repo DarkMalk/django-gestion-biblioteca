@@ -3,3 +3,4 @@ from .new_loan import new_loan
 from .edit_loan import edit_loan
 from .view_loan import view_loan
 from .return_loan import return_loan
+from .reserve_by_lector import reserve_by_lector

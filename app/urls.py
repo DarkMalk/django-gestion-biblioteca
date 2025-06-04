@@ -13,6 +13,7 @@ urlpatterns = [
     path("loans/<int:loan_id>", view_loan, name="view_loan"),
     path("loans/<int:loan_id>/edit", edit_loan, name="edit_loan"),
     path("loans/<int:loan_id>/return", return_loan, name="return_loan"),
+    path("loans/reserve/<int:book_id>", reserve_by_lector, name="reserve_by_lector"),
     path("login", login, name="login"),
     path("register", register, name="register"),
     path("logout", logout, name="logout"),
