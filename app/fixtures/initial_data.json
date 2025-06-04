@@ -3,24 +3,24 @@
     "model": "admin.logentry",
     "pk": 1,
     "fields": {
-      "action_time": "2025-05-19T02:38:48.197Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:40:14.090Z",
+      "user": 1,
       "content_type": 7,
       "object_id": "1",
-      "object_repr": "Ficción Contemporánea",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
+      "object_repr": "admin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
     }
   },
   {
     "model": "admin.logentry",
     "pk": 2,
     "fields": {
-      "action_time": "2025-05-19T02:38:53.194Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:42:25.769Z",
+      "user": 1,
       "content_type": 7,
       "object_id": "2",
-      "object_repr": "Misterio y Thriller",
+      "object_repr": "lmartinez",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -29,11 +29,11 @@
     "model": "admin.logentry",
     "pk": 3,
     "fields": {
-      "action_time": "2025-05-19T02:38:58.052Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:42:56.264Z",
+      "user": 1,
       "content_type": 7,
       "object_id": "3",
-      "object_repr": "Ciencia Ficción y Fantasía",
+      "object_repr": "jrojas",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -42,24 +42,24 @@
     "model": "admin.logentry",
     "pk": 4,
     "fields": {
-      "action_time": "2025-05-19T02:39:03.028Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:43:18.768Z",
+      "user": 1,
       "content_type": 7,
-      "object_id": "4",
-      "object_repr": "Romance",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
+      "object_id": "3",
+      "object_repr": "jrojas",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
     }
   },
   {
     "model": "admin.logentry",
     "pk": 5,
     "fields": {
-      "action_time": "2025-05-19T02:39:07.217Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:43:38.860Z",
+      "user": 1,
       "content_type": 7,
-      "object_id": "5",
-      "object_repr": "Historia",
+      "object_id": "4",
+      "object_repr": "mperez",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -68,11 +68,11 @@
     "model": "admin.logentry",
     "pk": 6,
     "fields": {
-      "action_time": "2025-05-19T02:39:11.855Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:44:00.042Z",
+      "user": 1,
       "content_type": 7,
-      "object_id": "6",
-      "object_repr": "Biografías y Memorias",
+      "object_id": "5",
+      "object_repr": "cfernandez",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -81,11 +81,11 @@
     "model": "admin.logentry",
     "pk": 7,
     "fields": {
-      "action_time": "2025-05-19T02:39:16.655Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:44:17.855Z",
+      "user": 1,
       "content_type": 7,
-      "object_id": "7",
-      "object_repr": "Desarrollo Personal y Autoayuda",
+      "object_id": "6",
+      "object_repr": "asanchez",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -94,11 +94,11 @@
     "model": "admin.logentry",
     "pk": 8,
     "fields": {
-      "action_time": "2025-05-19T02:39:21.777Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:44:33.702Z",
+      "user": 1,
       "content_type": 7,
-      "object_id": "8",
-      "object_repr": "Ciencia y Tecnología",
+      "object_id": "7",
+      "object_repr": "tcontreras",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -107,11 +107,11 @@
     "model": "admin.logentry",
     "pk": 9,
     "fields": {
-      "action_time": "2025-05-19T02:39:26.741Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:44:52.014Z",
+      "user": 1,
       "content_type": 7,
-      "object_id": "9",
-      "object_repr": "Literatura Juvenil",
+      "object_id": "8",
+      "object_repr": "jnavarro",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -120,11 +120,11 @@
     "model": "admin.logentry",
     "pk": 10,
     "fields": {
-      "action_time": "2025-05-19T02:39:31.789Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:45:10.130Z",
+      "user": 1,
       "content_type": 7,
-      "object_id": "10",
-      "object_repr": "Poesía y Drama",
+      "object_id": "9",
+      "object_repr": "rvera",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -133,9 +133,425 @@
     "model": "admin.logentry",
     "pk": 11,
     "fields": {
-      "action_time": "2025-05-19T02:39:56.428Z",
-      "user": 3,
+      "action_time": "2025-06-04T21:45:28.652Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "10",
+      "object_repr": "hcastro",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2025-06-04T21:45:57.488Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "11",
+      "object_repr": "dlopez",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2025-06-04T21:46:50.947Z",
+      "user": 1,
       "content_type": 6,
+      "object_id": "1",
+      "object_repr": "Editorial Planeta",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2025-06-04T21:46:56.277Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "2",
+      "object_repr": "Penguin Random House",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2025-06-04T21:47:00.861Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "3",
+      "object_repr": "Ediciones SM",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2025-06-04T21:47:05.585Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "4",
+      "object_repr": "Editorial Santillana",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2025-06-04T21:47:09.498Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "5",
+      "object_repr": "Anagrama",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2025-06-04T21:47:12.477Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "6",
+      "object_repr": "Alfaguara",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2025-06-04T21:47:17.404Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "7",
+      "object_repr": "Tusquets Editores",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2025-06-04T21:47:23.053Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "8",
+      "object_repr": "Ediciones B",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2025-06-04T21:47:28.484Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "9",
+      "object_repr": "Siglo XXI Editores",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2025-06-04T21:47:33.619Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "10",
+      "object_repr": "Fondo de Cultura Económica",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2025-06-04T21:47:38.647Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "11",
+      "object_repr": "Norma Editorial",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2025-06-04T21:47:44.035Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "12",
+      "object_repr": "Editorial Universitaria",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2025-06-04T21:47:48.100Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "13",
+      "object_repr": "Paidós",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2025-06-04T21:47:52.776Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "14",
+      "object_repr": "Libros del Zorzal",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2025-06-04T21:47:57.494Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "15",
+      "object_repr": "Editorial Andrés Bello",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2025-06-04T21:48:02.896Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "16",
+      "object_repr": "Blackie Books",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2025-06-04T21:48:09.466Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "17",
+      "object_repr": "RBA Libros",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2025-06-04T21:48:14.196Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "18",
+      "object_repr": "Ediciones Urano",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2025-06-04T21:48:19.310Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "19",
+      "object_repr": "Plaza & Janés",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2025-06-04T21:48:23.547Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "20",
+      "object_repr": "HarperCollins",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2025-06-04T21:48:51.551Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "1",
+      "object_repr": "Literatura y ficción",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2025-06-04T21:48:56.053Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "2",
+      "object_repr": "Ciencia y tecnología",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2025-06-04T21:48:59.037Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "3",
+      "object_repr": "Historia",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2025-06-04T21:49:01.974Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "4",
+      "object_repr": "Biografías",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2025-06-04T21:49:06.484Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "5",
+      "object_repr": "Infantil y juvenil",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2025-06-04T21:49:09.785Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "6",
+      "object_repr": "Autoayuda",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2025-06-04T21:49:14.297Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "7",
+      "object_repr": "Arte y fotografía",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2025-06-04T21:49:17.676Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "8",
+      "object_repr": "Filosofía",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2025-06-04T21:49:21.986Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "9",
+      "object_repr": "Ciencias sociales",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2025-06-04T21:49:25.706Z",
+      "user": 1,
+      "content_type": 5,
+      "object_id": "10",
+      "object_repr": "Educación",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2025-06-04T21:49:58.914Z",
+      "user": 1,
+      "content_type": 4,
       "object_id": "1",
       "object_repr": "Gabriel García Márquez",
       "action_flag": 1,
@@ -144,429 +560,13 @@
   },
   {
     "model": "admin.logentry",
-    "pk": 12,
-    "fields": {
-      "action_time": "2025-05-19T02:40:00.754Z",
-      "user": 3,
-      "content_type": 6,
-      "object_id": "2",
-      "object_repr": "Jane Austen",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 13,
-    "fields": {
-      "action_time": "2025-05-19T02:40:04.477Z",
-      "user": 3,
-      "content_type": 6,
-      "object_id": "3",
-      "object_repr": "Stephen King",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 14,
-    "fields": {
-      "action_time": "2025-05-19T02:40:09.727Z",
-      "user": 3,
-      "content_type": 6,
-      "object_id": "4",
-      "object_repr": "J.R.R. Tolkien",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 15,
-    "fields": {
-      "action_time": "2025-05-19T02:40:14.227Z",
-      "user": 3,
-      "content_type": 6,
-      "object_id": "5",
-      "object_repr": "Chimamanda Ngozi Adichie",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 16,
-    "fields": {
-      "action_time": "2025-05-19T02:40:18.590Z",
-      "user": 3,
-      "content_type": 6,
-      "object_id": "6",
-      "object_repr": "Haruki Murakami",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 17,
-    "fields": {
-      "action_time": "2025-05-19T02:40:23.068Z",
-      "user": 3,
-      "content_type": 6,
-      "object_id": "7",
-      "object_repr": "Simone de Beauvoir",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 18,
-    "fields": {
-      "action_time": "2025-05-19T02:40:27.618Z",
-      "user": 3,
-      "content_type": 6,
-      "object_id": "8",
-      "object_repr": "Isaac Asimov",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 19,
-    "fields": {
-      "action_time": "2025-05-19T02:40:32.139Z",
-      "user": 3,
-      "content_type": 6,
-      "object_id": "9",
-      "object_repr": "Isabel Allende",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 20,
-    "fields": {
-      "action_time": "2025-05-19T02:40:37.061Z",
-      "user": 3,
-      "content_type": 6,
-      "object_id": "10",
-      "object_repr": "William Shakespeare",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 21,
-    "fields": {
-      "action_time": "2025-05-19T02:42:17.583Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "1",
-      "object_repr": "Penguin Random House",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 22,
-    "fields": {
-      "action_time": "2025-05-19T02:42:21.173Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "2",
-      "object_repr": "Planeta",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 23,
-    "fields": {
-      "action_time": "2025-05-19T02:42:28.030Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "3",
-      "object_repr": "HarperCollins",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 24,
-    "fields": {
-      "action_time": "2025-05-19T02:42:31.720Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "4",
-      "object_repr": "Anagrama",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 25,
-    "fields": {
-      "action_time": "2025-05-19T02:42:35.280Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "5",
-      "object_repr": "Alfaguara",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 26,
-    "fields": {
-      "action_time": "2025-05-19T02:42:39.951Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "6",
-      "object_repr": "Sexto Piso",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 27,
-    "fields": {
-      "action_time": "2025-05-19T02:42:43.624Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "7",
-      "object_repr": "Bloomsbury",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 28,
-    "fields": {
-      "action_time": "2025-05-19T02:42:47.449Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "8",
-      "object_repr": "Gallimard",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 29,
-    "fields": {
-      "action_time": "2025-05-19T02:42:51.322Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "9",
-      "object_repr": "Salamandra",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 30,
-    "fields": {
-      "action_time": "2025-05-19T02:42:55.922Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "10",
-      "object_repr": "Ediciones B",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 31,
-    "fields": {
-      "action_time": "2025-05-19T02:44:31.915Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "1",
-      "object_repr": "Cien años de soledad",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 32,
-    "fields": {
-      "action_time": "2025-05-19T02:44:50.623Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "2",
-      "object_repr": "Orgullo y prejuicio",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 33,
-    "fields": {
-      "action_time": "2025-05-19T02:45:16.053Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "3",
-      "object_repr": "El resplandor",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 34,
-    "fields": {
-      "action_time": "2025-05-19T02:45:37.523Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "4",
-      "object_repr": "El Señor de los Anillos: La Comunidad del Anillo",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 35,
-    "fields": {
-      "action_time": "2025-05-19T02:45:56.097Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "5",
-      "object_repr": "Medio sol amarillo",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 36,
-    "fields": {
-      "action_time": "2025-05-19T02:46:28.188Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "11",
-      "object_repr": "Tusquets Editores",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 37,
-    "fields": {
-      "action_time": "2025-05-19T02:46:58.783Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "6",
-      "object_repr": "Tokio Blues (Norwegian Wood)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 38,
-    "fields": {
-      "action_time": "2025-05-19T02:47:05.246Z",
-      "user": 3,
-      "content_type": 8,
-      "object_id": "12",
-      "object_repr": "Debolsillo",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 39,
-    "fields": {
-      "action_time": "2025-05-19T02:47:37.222Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "7",
-      "object_repr": "El segundo sexo",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 40,
-    "fields": {
-      "action_time": "2025-05-19T02:48:04.196Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "8",
-      "object_repr": "Fundación",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 41,
-    "fields": {
-      "action_time": "2025-05-19T02:48:22.576Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "9",
-      "object_repr": "La casa de los espíritus",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 42,
-    "fields": {
-      "action_time": "2025-05-19T02:48:45.294Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "10",
-      "object_repr": "Hamlet",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 43,
-    "fields": {
-      "action_time": "2025-05-19T02:49:09.949Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "11",
-      "object_repr": "El amor en los tiempos del cólera",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
     "pk": 44,
     "fields": {
-      "action_time": "2025-05-19T02:49:35.537Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "12",
-      "object_repr": "Emma",
+      "action_time": "2025-06-04T21:50:03.212Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "Isabel Allende",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -575,11 +575,11 @@
     "model": "admin.logentry",
     "pk": 45,
     "fields": {
-      "action_time": "2025-05-19T02:49:59.326Z",
-      "user": 3,
-      "content_type": 10,
-      "object_id": "13",
-      "object_repr": "It (Eso)",
+      "action_time": "2025-06-04T21:50:07.298Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "Mario Vargas Llosa",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -588,455 +588,765 @@
     "model": "admin.logentry",
     "pk": 46,
     "fields": {
-      "action_time": "2025-05-22T00:31:46.667Z",
-      "user": 3,
-      "content_type": 11,
-      "object_id": "3",
-      "object_repr": "Loan object (3)",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Due date\", \"Status\"]}}]"
+      "action_time": "2025-06-04T21:50:11.074Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "4",
+      "object_repr": "Julio Cortázar",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
     }
   },
   {
     "model": "admin.logentry",
     "pk": 47,
     "fields": {
-      "action_time": "2025-05-22T00:32:37.964Z",
-      "user": 3,
-      "content_type": 11,
-      "object_id": "3",
-      "object_repr": "Loan object (3)",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+      "action_time": "2025-06-04T21:50:14.674Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "5",
+      "object_repr": "J.K. Rowling",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
     }
   },
   {
     "model": "admin.logentry",
     "pk": 48,
     "fields": {
-      "action_time": "2025-05-22T00:32:52.504Z",
-      "user": 3,
-      "content_type": 11,
+      "action_time": "2025-06-04T21:50:18.544Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "6",
+      "object_repr": "George Orwell",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2025-06-04T21:50:22.073Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "7",
+      "object_repr": "Haruki Murakami",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2025-06-04T21:50:27.225Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "8",
+      "object_repr": "Stephen King",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2025-06-04T21:50:31.115Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "9",
+      "object_repr": "Jane Austen",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2025-06-04T21:50:34.812Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "10",
+      "object_repr": "Eduardo Galeano",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2025-06-04T21:52:54.054Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Cien años de soledad",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2025-06-04T21:53:21.711Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "La casa de los espíritus",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2025-06-04T21:53:50.735Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Conversación en La Catedral",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+      "action_time": "2025-06-04T21:54:46.065Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "21",
+      "object_repr": "Ediciones Cátedra",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+      "action_time": "2025-06-04T21:54:57.829Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Rayuela",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+      "action_time": "2025-06-04T21:55:28.831Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "22",
+      "object_repr": "Salamandra",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+      "action_time": "2025-06-04T21:55:34.772Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Harry Potter y la piedra filosofal",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+      "action_time": "2025-06-04T21:55:56.066Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "1984",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+      "action_time": "2025-06-04T21:56:34.655Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "Tokio Blues",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+      "action_time": "2025-06-04T21:57:28.210Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "El resplandor",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+      "action_time": "2025-06-04T21:57:56.030Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "9",
+      "object_repr": "Orgullo y prejuicio",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+      "action_time": "2025-06-04T21:58:24.638Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "Las venas abiertas de América Latina",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+      "action_time": "2025-06-04T21:58:55.922Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "admin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+      "action_time": "2025-06-04T21:59:50.906Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "6",
+      "object_repr": "asanchez",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Date joined\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+      "action_time": "2025-06-04T22:00:05.349Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "mperez",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Date joined\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+      "action_time": "2025-06-04T22:00:15.672Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "7",
+      "object_repr": "tcontreras",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Date joined\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+      "action_time": "2025-06-04T22:00:20.756Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "9",
+      "object_repr": "rvera",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Date joined\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+      "action_time": "2025-06-04T22:06:06.603Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "Loan object (4)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Request date\", \"Due date\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+      "action_time": "2025-06-04T22:06:39.798Z",
+      "user": 1,
+      "content_type": 9,
       "object_id": "1",
       "object_repr": "Loan object (1)",
       "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Due date\", \"Status\"]}}]"
+      "change_message": "[{\"changed\": {\"fields\": [\"Request date\", \"Due date\", \"Return date\", \"Status\"]}}]"
     }
   },
   {
     "model": "auth.permission",
     "pk": 1,
-    "fields": { "name": "Can add log entry", "content_type": 1, "codename": "add_logentry" }
+    "fields": { "name": "Can add permission", "content_type": 1, "codename": "add_permission" }
   },
   {
     "model": "auth.permission",
     "pk": 2,
-    "fields": { "name": "Can change log entry", "content_type": 1, "codename": "change_logentry" }
+    "fields": { "name": "Can change permission", "content_type": 1, "codename": "change_permission" }
   },
   {
     "model": "auth.permission",
     "pk": 3,
-    "fields": { "name": "Can delete log entry", "content_type": 1, "codename": "delete_logentry" }
+    "fields": { "name": "Can delete permission", "content_type": 1, "codename": "delete_permission" }
   },
   {
     "model": "auth.permission",
     "pk": 4,
-    "fields": { "name": "Can view log entry", "content_type": 1, "codename": "view_logentry" }
+    "fields": { "name": "Can view permission", "content_type": 1, "codename": "view_permission" }
   },
   {
     "model": "auth.permission",
     "pk": 5,
-    "fields": { "name": "Can add permission", "content_type": 2, "codename": "add_permission" }
+    "fields": { "name": "Can add group", "content_type": 2, "codename": "add_group" }
   },
   {
     "model": "auth.permission",
     "pk": 6,
-    "fields": { "name": "Can change permission", "content_type": 2, "codename": "change_permission" }
+    "fields": { "name": "Can change group", "content_type": 2, "codename": "change_group" }
   },
   {
     "model": "auth.permission",
     "pk": 7,
-    "fields": { "name": "Can delete permission", "content_type": 2, "codename": "delete_permission" }
+    "fields": { "name": "Can delete group", "content_type": 2, "codename": "delete_group" }
   },
   {
     "model": "auth.permission",
     "pk": 8,
-    "fields": { "name": "Can view permission", "content_type": 2, "codename": "view_permission" }
+    "fields": { "name": "Can view group", "content_type": 2, "codename": "view_group" }
   },
   {
     "model": "auth.permission",
     "pk": 9,
-    "fields": { "name": "Can add group", "content_type": 3, "codename": "add_group" }
+    "fields": { "name": "Can add content type", "content_type": 3, "codename": "add_contenttype" }
   },
   {
     "model": "auth.permission",
     "pk": 10,
-    "fields": { "name": "Can change group", "content_type": 3, "codename": "change_group" }
+    "fields": { "name": "Can change content type", "content_type": 3, "codename": "change_contenttype" }
   },
   {
     "model": "auth.permission",
     "pk": 11,
-    "fields": { "name": "Can delete group", "content_type": 3, "codename": "delete_group" }
+    "fields": { "name": "Can delete content type", "content_type": 3, "codename": "delete_contenttype" }
   },
   {
     "model": "auth.permission",
     "pk": 12,
-    "fields": { "name": "Can view group", "content_type": 3, "codename": "view_group" }
+    "fields": { "name": "Can view content type", "content_type": 3, "codename": "view_contenttype" }
   },
   {
     "model": "auth.permission",
     "pk": 13,
-    "fields": { "name": "Can add content type", "content_type": 4, "codename": "add_contenttype" }
+    "fields": { "name": "Can add author", "content_type": 4, "codename": "add_author" }
   },
   {
     "model": "auth.permission",
     "pk": 14,
-    "fields": { "name": "Can change content type", "content_type": 4, "codename": "change_contenttype" }
+    "fields": { "name": "Can change author", "content_type": 4, "codename": "change_author" }
   },
   {
     "model": "auth.permission",
     "pk": 15,
-    "fields": { "name": "Can delete content type", "content_type": 4, "codename": "delete_contenttype" }
+    "fields": { "name": "Can delete author", "content_type": 4, "codename": "delete_author" }
   },
   {
     "model": "auth.permission",
     "pk": 16,
-    "fields": { "name": "Can view content type", "content_type": 4, "codename": "view_contenttype" }
+    "fields": { "name": "Can view author", "content_type": 4, "codename": "view_author" }
   },
   {
     "model": "auth.permission",
     "pk": 17,
-    "fields": { "name": "Can add session", "content_type": 5, "codename": "add_session" }
+    "fields": { "name": "Can add category", "content_type": 5, "codename": "add_category" }
   },
   {
     "model": "auth.permission",
     "pk": 18,
-    "fields": { "name": "Can change session", "content_type": 5, "codename": "change_session" }
+    "fields": { "name": "Can change category", "content_type": 5, "codename": "change_category" }
   },
   {
     "model": "auth.permission",
     "pk": 19,
-    "fields": { "name": "Can delete session", "content_type": 5, "codename": "delete_session" }
+    "fields": { "name": "Can delete category", "content_type": 5, "codename": "delete_category" }
   },
   {
     "model": "auth.permission",
     "pk": 20,
-    "fields": { "name": "Can view session", "content_type": 5, "codename": "view_session" }
+    "fields": { "name": "Can view category", "content_type": 5, "codename": "view_category" }
   },
   {
     "model": "auth.permission",
     "pk": 21,
-    "fields": { "name": "Can add author", "content_type": 6, "codename": "add_author" }
+    "fields": { "name": "Can add editorial", "content_type": 6, "codename": "add_editorial" }
   },
   {
     "model": "auth.permission",
     "pk": 22,
-    "fields": { "name": "Can change author", "content_type": 6, "codename": "change_author" }
+    "fields": { "name": "Can change editorial", "content_type": 6, "codename": "change_editorial" }
   },
   {
     "model": "auth.permission",
     "pk": 23,
-    "fields": { "name": "Can delete author", "content_type": 6, "codename": "delete_author" }
+    "fields": { "name": "Can delete editorial", "content_type": 6, "codename": "delete_editorial" }
   },
   {
     "model": "auth.permission",
     "pk": 24,
-    "fields": { "name": "Can view author", "content_type": 6, "codename": "view_author" }
+    "fields": { "name": "Can view editorial", "content_type": 6, "codename": "view_editorial" }
   },
   {
     "model": "auth.permission",
     "pk": 25,
-    "fields": { "name": "Can add category", "content_type": 7, "codename": "add_category" }
+    "fields": { "name": "Can add user", "content_type": 7, "codename": "add_user" }
   },
   {
     "model": "auth.permission",
     "pk": 26,
-    "fields": { "name": "Can change category", "content_type": 7, "codename": "change_category" }
+    "fields": { "name": "Can change user", "content_type": 7, "codename": "change_user" }
   },
   {
     "model": "auth.permission",
     "pk": 27,
-    "fields": { "name": "Can delete category", "content_type": 7, "codename": "delete_category" }
+    "fields": { "name": "Can delete user", "content_type": 7, "codename": "delete_user" }
   },
   {
     "model": "auth.permission",
     "pk": 28,
-    "fields": { "name": "Can view category", "content_type": 7, "codename": "view_category" }
+    "fields": { "name": "Can view user", "content_type": 7, "codename": "view_user" }
   },
   {
     "model": "auth.permission",
     "pk": 29,
-    "fields": { "name": "Can add editorial", "content_type": 8, "codename": "add_editorial" }
+    "fields": { "name": "Can add book", "content_type": 8, "codename": "add_book" }
   },
   {
     "model": "auth.permission",
     "pk": 30,
-    "fields": { "name": "Can change editorial", "content_type": 8, "codename": "change_editorial" }
+    "fields": { "name": "Can change book", "content_type": 8, "codename": "change_book" }
   },
   {
     "model": "auth.permission",
     "pk": 31,
-    "fields": { "name": "Can delete editorial", "content_type": 8, "codename": "delete_editorial" }
+    "fields": { "name": "Can delete book", "content_type": 8, "codename": "delete_book" }
   },
   {
     "model": "auth.permission",
     "pk": 32,
-    "fields": { "name": "Can view editorial", "content_type": 8, "codename": "view_editorial" }
+    "fields": { "name": "Can view book", "content_type": 8, "codename": "view_book" }
   },
   {
     "model": "auth.permission",
     "pk": 33,
-    "fields": { "name": "Can add user", "content_type": 9, "codename": "add_user" }
+    "fields": { "name": "Can add loan", "content_type": 9, "codename": "add_loan" }
   },
   {
     "model": "auth.permission",
     "pk": 34,
-    "fields": { "name": "Can change user", "content_type": 9, "codename": "change_user" }
+    "fields": { "name": "Can change loan", "content_type": 9, "codename": "change_loan" }
   },
   {
     "model": "auth.permission",
     "pk": 35,
-    "fields": { "name": "Can delete user", "content_type": 9, "codename": "delete_user" }
+    "fields": { "name": "Can delete loan", "content_type": 9, "codename": "delete_loan" }
   },
   {
     "model": "auth.permission",
     "pk": 36,
-    "fields": { "name": "Can view user", "content_type": 9, "codename": "view_user" }
+    "fields": { "name": "Can view loan", "content_type": 9, "codename": "view_loan" }
   },
   {
     "model": "auth.permission",
     "pk": 37,
-    "fields": { "name": "Can add book", "content_type": 10, "codename": "add_book" }
+    "fields": { "name": "Can add log entry", "content_type": 10, "codename": "add_logentry" }
   },
   {
     "model": "auth.permission",
     "pk": 38,
-    "fields": { "name": "Can change book", "content_type": 10, "codename": "change_book" }
+    "fields": { "name": "Can change log entry", "content_type": 10, "codename": "change_logentry" }
   },
   {
     "model": "auth.permission",
     "pk": 39,
-    "fields": { "name": "Can delete book", "content_type": 10, "codename": "delete_book" }
+    "fields": { "name": "Can delete log entry", "content_type": 10, "codename": "delete_logentry" }
   },
   {
     "model": "auth.permission",
     "pk": 40,
-    "fields": { "name": "Can view book", "content_type": 10, "codename": "view_book" }
+    "fields": { "name": "Can view log entry", "content_type": 10, "codename": "view_logentry" }
   },
   {
     "model": "auth.permission",
     "pk": 41,
-    "fields": { "name": "Can add loan", "content_type": 11, "codename": "add_loan" }
+    "fields": { "name": "Can add session", "content_type": 11, "codename": "add_session" }
   },
   {
     "model": "auth.permission",
     "pk": 42,
-    "fields": { "name": "Can change loan", "content_type": 11, "codename": "change_loan" }
+    "fields": { "name": "Can change session", "content_type": 11, "codename": "change_session" }
   },
   {
     "model": "auth.permission",
     "pk": 43,
-    "fields": { "name": "Can delete loan", "content_type": 11, "codename": "delete_loan" }
+    "fields": { "name": "Can delete session", "content_type": 11, "codename": "delete_session" }
   },
   {
     "model": "auth.permission",
     "pk": 44,
-    "fields": { "name": "Can view loan", "content_type": 11, "codename": "view_loan" }
+    "fields": { "name": "Can view session", "content_type": 11, "codename": "view_session" }
   },
-  { "model": "contenttypes.contenttype", "pk": 1, "fields": { "app_label": "admin", "model": "logentry" } },
-  { "model": "contenttypes.contenttype", "pk": 2, "fields": { "app_label": "auth", "model": "permission" } },
-  { "model": "contenttypes.contenttype", "pk": 3, "fields": { "app_label": "auth", "model": "group" } },
-  { "model": "contenttypes.contenttype", "pk": 4, "fields": { "app_label": "contenttypes", "model": "contenttype" } },
-  { "model": "contenttypes.contenttype", "pk": 5, "fields": { "app_label": "sessions", "model": "session" } },
-  { "model": "contenttypes.contenttype", "pk": 6, "fields": { "app_label": "app", "model": "author" } },
-  { "model": "contenttypes.contenttype", "pk": 7, "fields": { "app_label": "app", "model": "category" } },
-  { "model": "contenttypes.contenttype", "pk": 8, "fields": { "app_label": "app", "model": "editorial" } },
-  { "model": "contenttypes.contenttype", "pk": 9, "fields": { "app_label": "app", "model": "user" } },
-  { "model": "contenttypes.contenttype", "pk": 10, "fields": { "app_label": "app", "model": "book" } },
-  { "model": "contenttypes.contenttype", "pk": 11, "fields": { "app_label": "app", "model": "loan" } },
+  { "model": "contenttypes.contenttype", "pk": 1, "fields": { "app_label": "auth", "model": "permission" } },
+  { "model": "contenttypes.contenttype", "pk": 2, "fields": { "app_label": "auth", "model": "group" } },
+  { "model": "contenttypes.contenttype", "pk": 3, "fields": { "app_label": "contenttypes", "model": "contenttype" } },
+  { "model": "contenttypes.contenttype", "pk": 4, "fields": { "app_label": "app", "model": "author" } },
+  { "model": "contenttypes.contenttype", "pk": 5, "fields": { "app_label": "app", "model": "category" } },
+  { "model": "contenttypes.contenttype", "pk": 6, "fields": { "app_label": "app", "model": "editorial" } },
+  { "model": "contenttypes.contenttype", "pk": 7, "fields": { "app_label": "app", "model": "user" } },
+  { "model": "contenttypes.contenttype", "pk": 8, "fields": { "app_label": "app", "model": "book" } },
+  { "model": "contenttypes.contenttype", "pk": 9, "fields": { "app_label": "app", "model": "loan" } },
+  { "model": "contenttypes.contenttype", "pk": 10, "fields": { "app_label": "admin", "model": "logentry" } },
+  { "model": "contenttypes.contenttype", "pk": 11, "fields": { "app_label": "sessions", "model": "session" } },
   {
     "model": "sessions.session",
-    "pk": "04afuanxholzewgxz10vpoaaqi49fh8i",
+    "pk": "o5u0xwr6rwk5z9wgp4ybeeah1a7vlr4s",
     "fields": {
-      "session_data": ".eJxVjDsOwjAQBe_iGlkbrz9rSnrOYK0_wQHkSHFSIe4OkVJA-2bmvUTgba1h62UJUxZngeL0u0VOj9J2kO_cbrNMc1uXKcpdkQft8jrn8rwc7t9B5V6_dUTjNAArYtKKEo3I3oAHy5gwRpMLWI-WxuK9Vo5d1joOZcjKkAYn3h_CYDbp:1uHAEP:_oSAPnHnYyr6sTsGFwOQ0oDOIhq5iDIaDJvYay4WLHU",
-      "expire_date": "2025-06-02T23:49:17.599Z"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "hg4d4upspu1x619qfrmqssujvigdxhk5",
-    "fields": {
-      "session_data": ".eJxVjDsOwjAQBe_iGlkbrz9rSnrOYK0_wQHkSHFSIe4OkVJA-2bmvUTgba1h62UJUxZngeL0u0VOj9J2kO_cbrNMc1uXKcpdkQft8jrn8rwc7t9B5V6_dUTjNAArYtKKEo3I3oAHy5gwRpMLWI-WxuK9Vo5d1joOZcjKkAYn3h_CYDbp:1uK3wc:Bl21e324BzSooll-tyRg5MLnFUONoo900KwX09Hxtw0",
-      "expire_date": "2025-06-10T23:42:54.658Z"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "izzwa00mqtbkptffwaoasnvfk3aa0ai1",
-    "fields": {
-      "session_data": ".eJxVjDsOwjAQBe_iGlkbrz9rSnrOYK0_wQHkSHFSIe4OkVJA-2bmvUTgba1h62UJUxZngeL0u0VOj9J2kO_cbrNMc1uXKcpdkQft8jrn8rwc7t9B5V6_dUTjNAArYtKKEo3I3oAHy5gwRpMLWI-WxuK9Vo5d1joOZcjKkAYn3h_CYDbp:1uHqnJ:Czp6H2g9vv9cc23ej9h3ImfLoHgrSdlauUQxeBghUgo",
-      "expire_date": "2025-06-04T21:16:09.192Z"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "me1gokha0vkgyq90lqudoaveupbcv044",
-    "fields": {
-      "session_data": ".eJxVjMsOwiAQRf-FtSE4DFBcuvcbyAwPqRqalHZl_HfbpAvd3nPOfYtA61LD2vMcxiQuworT78YUn7ntID2o3ScZp7bMI8tdkQft8jal_Loe7t9BpV632qCHAQgAIxbtQBFhHsh69tEVo3xkVzxqLITEbHTSqKJNZDZyBhafL9VfN_0:1uIeE3:yNoH_eHwWdMPwKyRY5qUDWdkuQxzeTPE1Bs9JYEHeKE",
-      "expire_date": "2025-06-07T02:03:03.212Z"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "s7h76d47z9b6lcez8zmxpiuumtequpi7",
-    "fields": {
-      "session_data": ".eJxVjDsOwjAQBe_iGlkbrz9rSnrOYK0_wQHkSHFSIe4OkVJA-2bmvUTgba1h62UJUxZngeL0u0VOj9J2kO_cbrNMc1uXKcpdkQft8jrn8rwc7t9B5V6_dUTjNAArYtKKEo3I3oAHy5gwRpMLWI-WxuK9Vo5d1joOZcjKkAYn3h_CYDbp:1uGqMV:Wd2XmpTE7o0lJsa5SPnMo23CWiVJ0B7Q28k80JHbHX4",
-      "expire_date": "2025-06-02T02:36:19.107Z"
+      "session_data": ".eJxVjEEOwiAQRe_C2hBoGQSX7j0DYZhBqgaS0q6MdzckXej2v_f-W4S4byXsndewkLgILU6_G8b05DoAPWK9N5la3dYF5VDkQbu8NeLX9XD_DkrsZdQZtMtgjQcwLhlAUE5ra7N385QiKsU8MaWZCBPO4BEYgRhNPHtE8fkC2n04lg:1uMvps:m4nwLfrxFQjXLbqnhyEqtZefyNRcvTPJVsxXVj0Moqs",
+      "expire_date": "2025-06-18T21:39:48.889Z"
     }
   },
   {
     "model": "app.author",
     "pk": 1,
-    "fields": { "name": "Gabriel García Márquez", "created_at": "2025-05-19T02:39:56.427Z" }
+    "fields": { "name": "Gabriel García Márquez", "created_at": "2025-06-04T21:49:58.913Z" }
   },
-  { "model": "app.author", "pk": 2, "fields": { "name": "Jane Austen", "created_at": "2025-05-19T02:40:00.753Z" } },
-  { "model": "app.author", "pk": 3, "fields": { "name": "Stephen King", "created_at": "2025-05-19T02:40:04.476Z" } },
-  { "model": "app.author", "pk": 4, "fields": { "name": "J.R.R. Tolkien", "created_at": "2025-05-19T02:40:09.726Z" } },
+  { "model": "app.author", "pk": 2, "fields": { "name": "Isabel Allende", "created_at": "2025-06-04T21:50:03.210Z" } },
   {
     "model": "app.author",
-    "pk": 5,
-    "fields": { "name": "Chimamanda Ngozi Adichie", "created_at": "2025-05-19T02:40:14.226Z" }
+    "pk": 3,
+    "fields": { "name": "Mario Vargas Llosa", "created_at": "2025-06-04T21:50:07.297Z" }
   },
-  { "model": "app.author", "pk": 6, "fields": { "name": "Haruki Murakami", "created_at": "2025-05-19T02:40:18.589Z" } },
-  {
-    "model": "app.author",
-    "pk": 7,
-    "fields": { "name": "Simone de Beauvoir", "created_at": "2025-05-19T02:40:23.067Z" }
-  },
-  { "model": "app.author", "pk": 8, "fields": { "name": "Isaac Asimov", "created_at": "2025-05-19T02:40:27.618Z" } },
-  { "model": "app.author", "pk": 9, "fields": { "name": "Isabel Allende", "created_at": "2025-05-19T02:40:32.136Z" } },
+  { "model": "app.author", "pk": 4, "fields": { "name": "Julio Cortázar", "created_at": "2025-06-04T21:50:11.073Z" } },
+  { "model": "app.author", "pk": 5, "fields": { "name": "J.K. Rowling", "created_at": "2025-06-04T21:50:14.673Z" } },
+  { "model": "app.author", "pk": 6, "fields": { "name": "George Orwell", "created_at": "2025-06-04T21:50:18.543Z" } },
+  { "model": "app.author", "pk": 7, "fields": { "name": "Haruki Murakami", "created_at": "2025-06-04T21:50:22.072Z" } },
+  { "model": "app.author", "pk": 8, "fields": { "name": "Stephen King", "created_at": "2025-06-04T21:50:27.224Z" } },
+  { "model": "app.author", "pk": 9, "fields": { "name": "Jane Austen", "created_at": "2025-06-04T21:50:31.113Z" } },
   {
     "model": "app.author",
     "pk": 10,
-    "fields": { "name": "William Shakespeare", "created_at": "2025-05-19T02:40:37.060Z" }
+    "fields": { "name": "Eduardo Galeano", "created_at": "2025-06-04T21:50:34.811Z" }
   },
   {
     "model": "app.category",
     "pk": 1,
-    "fields": { "name": "Ficción Contemporánea", "created_at": "2025-05-19T02:38:48.196Z" }
+    "fields": { "name": "Literatura y ficción", "created_at": "2025-06-04T21:48:51.550Z" }
   },
   {
     "model": "app.category",
     "pk": 2,
-    "fields": { "name": "Misterio y Thriller", "created_at": "2025-05-19T02:38:53.193Z" }
+    "fields": { "name": "Ciencia y tecnología", "created_at": "2025-06-04T21:48:56.052Z" }
   },
+  { "model": "app.category", "pk": 3, "fields": { "name": "Historia", "created_at": "2025-06-04T21:48:59.036Z" } },
+  { "model": "app.category", "pk": 4, "fields": { "name": "Biografías", "created_at": "2025-06-04T21:49:01.974Z" } },
   {
     "model": "app.category",
-    "pk": 3,
-    "fields": { "name": "Ciencia Ficción y Fantasía", "created_at": "2025-05-19T02:38:58.051Z" }
+    "pk": 5,
+    "fields": { "name": "Infantil y juvenil", "created_at": "2025-06-04T21:49:06.483Z" }
   },
-  { "model": "app.category", "pk": 4, "fields": { "name": "Romance", "created_at": "2025-05-19T02:39:03.027Z" } },
-  { "model": "app.category", "pk": 5, "fields": { "name": "Historia", "created_at": "2025-05-19T02:39:07.216Z" } },
-  {
-    "model": "app.category",
-    "pk": 6,
-    "fields": { "name": "Biografías y Memorias", "created_at": "2025-05-19T02:39:11.854Z" }
-  },
+  { "model": "app.category", "pk": 6, "fields": { "name": "Autoayuda", "created_at": "2025-06-04T21:49:09.783Z" } },
   {
     "model": "app.category",
     "pk": 7,
-    "fields": { "name": "Desarrollo Personal y Autoayuda", "created_at": "2025-05-19T02:39:16.655Z" }
+    "fields": { "name": "Arte y fotografía", "created_at": "2025-06-04T21:49:14.296Z" }
   },
-  {
-    "model": "app.category",
-    "pk": 8,
-    "fields": { "name": "Ciencia y Tecnología", "created_at": "2025-05-19T02:39:21.776Z" }
-  },
+  { "model": "app.category", "pk": 8, "fields": { "name": "Filosofía", "created_at": "2025-06-04T21:49:17.675Z" } },
   {
     "model": "app.category",
     "pk": 9,
-    "fields": { "name": "Literatura Juvenil", "created_at": "2025-05-19T02:39:26.740Z" }
+    "fields": { "name": "Ciencias sociales", "created_at": "2025-06-04T21:49:21.984Z" }
   },
-  {
-    "model": "app.category",
-    "pk": 10,
-    "fields": { "name": "Poesía y Drama", "created_at": "2025-05-19T02:39:31.788Z" }
-  },
-  { "model": "app.category", "pk": 11, "fields": { "name": "Fan Fiction", "created_at": "2025-05-20T03:51:09.419Z" } },
+  { "model": "app.category", "pk": 10, "fields": { "name": "Educación", "created_at": "2025-06-04T21:49:25.705Z" } },
   {
     "model": "app.editorial",
     "pk": 1,
-    "fields": { "name": "Penguin Random House", "address": "", "email": "", "created_at": "2025-05-19T02:42:17.582Z" }
+    "fields": { "name": "Editorial Planeta", "address": null, "email": null, "created_at": "2025-06-04T21:46:50.946Z" }
   },
   {
     "model": "app.editorial",
     "pk": 2,
-    "fields": { "name": "Planeta", "address": null, "email": null, "created_at": "2025-05-19T02:42:21.172Z" }
+    "fields": {
+      "name": "Penguin Random House",
+      "address": null,
+      "email": null,
+      "created_at": "2025-06-04T21:46:56.276Z"
+    }
   },
   {
     "model": "app.editorial",
     "pk": 3,
-    "fields": { "name": "HarperCollins", "address": null, "email": null, "created_at": "2025-05-19T02:42:28.028Z" }
+    "fields": { "name": "Ediciones SM", "address": null, "email": null, "created_at": "2025-06-04T21:47:00.860Z" }
   },
   {
     "model": "app.editorial",
     "pk": 4,
-    "fields": { "name": "Anagrama", "address": null, "email": null, "created_at": "2025-05-19T02:42:31.720Z" }
+    "fields": {
+      "name": "Editorial Santillana",
+      "address": null,
+      "email": null,
+      "created_at": "2025-06-04T21:47:05.584Z"
+    }
   },
   {
     "model": "app.editorial",
     "pk": 5,
-    "fields": { "name": "Alfaguara", "address": null, "email": null, "created_at": "2025-05-19T02:42:35.279Z" }
+    "fields": { "name": "Anagrama", "address": null, "email": null, "created_at": "2025-06-04T21:47:09.497Z" }
   },
   {
     "model": "app.editorial",
     "pk": 6,
-    "fields": { "name": "Sexto Piso", "address": null, "email": null, "created_at": "2025-05-19T02:42:39.950Z" }
+    "fields": { "name": "Alfaguara", "address": null, "email": null, "created_at": "2025-06-04T21:47:12.476Z" }
   },
   {
     "model": "app.editorial",
     "pk": 7,
-    "fields": { "name": "Bloomsbury", "address": null, "email": null, "created_at": "2025-05-19T02:42:43.623Z" }
+    "fields": { "name": "Tusquets Editores", "address": null, "email": null, "created_at": "2025-06-04T21:47:17.402Z" }
   },
   {
     "model": "app.editorial",
     "pk": 8,
-    "fields": { "name": "Gallimard", "address": null, "email": null, "created_at": "2025-05-19T02:42:47.448Z" }
+    "fields": { "name": "Ediciones B", "address": null, "email": null, "created_at": "2025-06-04T21:47:23.052Z" }
   },
   {
     "model": "app.editorial",
     "pk": 9,
-    "fields": { "name": "Salamandra", "address": null, "email": null, "created_at": "2025-05-19T02:42:51.321Z" }
+    "fields": { "name": "Siglo XXI Editores", "address": null, "email": null, "created_at": "2025-06-04T21:47:28.482Z" }
   },
   {
     "model": "app.editorial",
     "pk": 10,
-    "fields": { "name": "Ediciones B", "address": null, "email": null, "created_at": "2025-05-19T02:42:55.921Z" }
+    "fields": {
+      "name": "Fondo de Cultura Económica",
+      "address": null,
+      "email": null,
+      "created_at": "2025-06-04T21:47:33.618Z"
+    }
   },
   {
     "model": "app.editorial",
     "pk": 11,
-    "fields": { "name": "Tusquets Editores", "address": null, "email": null, "created_at": "2025-05-19T02:46:28.187Z" }
+    "fields": { "name": "Norma Editorial", "address": null, "email": null, "created_at": "2025-06-04T21:47:38.646Z" }
   },
   {
     "model": "app.editorial",
     "pk": 12,
-    "fields": { "name": "Debolsillo", "address": null, "email": null, "created_at": "2025-05-19T02:47:05.245Z" }
+    "fields": {
+      "name": "Editorial Universitaria",
+      "address": null,
+      "email": null,
+      "created_at": "2025-06-04T21:47:44.034Z"
+    }
   },
   {
     "model": "app.editorial",
     "pk": 13,
-    "fields": { "name": "Signet Classics", "address": "", "email": "", "created_at": "2025-05-20T04:33:42.214Z" }
+    "fields": { "name": "Paidós", "address": null, "email": null, "created_at": "2025-06-04T21:47:48.099Z" }
   },
   {
     "model": "app.editorial",
     "pk": 14,
+    "fields": { "name": "Libros del Zorzal", "address": null, "email": null, "created_at": "2025-06-04T21:47:52.775Z" }
+  },
+  {
+    "model": "app.editorial",
+    "pk": 15,
     "fields": {
-      "name": "Grand Central Publishing",
-      "address": "1290 Avenue of the Americas, New York, USA",
-      "email": "contact@grandcentralpublishing.com",
-      "created_at": "2025-05-20T04:34:31.284Z"
+      "name": "Editorial Andrés Bello",
+      "address": null,
+      "email": null,
+      "created_at": "2025-06-04T21:47:57.493Z"
     }
+  },
+  {
+    "model": "app.editorial",
+    "pk": 16,
+    "fields": { "name": "Blackie Books", "address": null, "email": null, "created_at": "2025-06-04T21:48:02.894Z" }
+  },
+  {
+    "model": "app.editorial",
+    "pk": 17,
+    "fields": { "name": "RBA Libros", "address": null, "email": null, "created_at": "2025-06-04T21:48:09.465Z" }
+  },
+  {
+    "model": "app.editorial",
+    "pk": 18,
+    "fields": { "name": "Ediciones Urano", "address": null, "email": null, "created_at": "2025-06-04T21:48:14.195Z" }
+  },
+  {
+    "model": "app.editorial",
+    "pk": 19,
+    "fields": { "name": "Plaza & Janés", "address": null, "email": null, "created_at": "2025-06-04T21:48:19.309Z" }
+  },
+  {
+    "model": "app.editorial",
+    "pk": 20,
+    "fields": { "name": "HarperCollins", "address": null, "email": null, "created_at": "2025-06-04T21:48:23.546Z" }
+  },
+  {
+    "model": "app.editorial",
+    "pk": 21,
+    "fields": { "name": "Ediciones Cátedra", "address": null, "email": null, "created_at": "2025-06-04T21:54:46.063Z" }
+  },
+  {
+    "model": "app.editorial",
+    "pk": 22,
+    "fields": { "name": "Salamandra", "address": null, "email": null, "created_at": "2025-06-04T21:55:28.830Z" }
   },
   {
     "model": "app.book",
@@ -1044,180 +1354,138 @@
     "fields": {
       "title": "Cien años de soledad",
       "author": 1,
-      "isbn": "978-030726400",
-      "publisher": 2,
+      "isbn": "9780307474728",
+      "publisher": 1,
       "category": 1,
-      "stock": 15,
+      "stock": 4,
       "active": true,
-      "created_at": "2025-05-19T02:44:31.913Z"
+      "created_at": "2025-06-04T21:52:54.053Z"
     }
   },
   {
     "model": "app.book",
     "pk": 2,
     "fields": {
-      "title": "Orgullo y prejuicio",
+      "title": "La casa de los espíritus",
       "author": 2,
-      "isbn": "978-014143951",
-      "publisher": 1,
-      "category": 4,
-      "stock": 22,
+      "isbn": "9780525433472",
+      "publisher": 6,
+      "category": 1,
+      "stock": 3,
       "active": true,
-      "created_at": "2025-05-19T02:44:50.622Z"
+      "created_at": "2025-06-04T21:53:21.710Z"
     }
   },
   {
     "model": "app.book",
     "pk": 3,
     "fields": {
-      "title": "El resplandor",
+      "title": "Conversación en La Catedral",
       "author": 3,
-      "isbn": "978-030774365",
-      "publisher": 3,
-      "category": 2,
-      "stock": 19,
+      "isbn": "9788439704413",
+      "publisher": 7,
+      "category": 9,
+      "stock": 4,
       "active": true,
-      "created_at": "2025-05-19T02:45:16.052Z"
+      "created_at": "2025-06-04T21:53:50.733Z"
     }
   },
   {
     "model": "app.book",
     "pk": 4,
     "fields": {
-      "title": "El Señor de los Anillos: La Comunidad del Anillo",
+      "title": "Rayuela",
       "author": 4,
-      "isbn": "978-061826027",
-      "publisher": 7,
-      "category": 3,
-      "stock": 11,
+      "isbn": "9788466340320",
+      "publisher": 21,
+      "category": 8,
+      "stock": 2,
       "active": true,
-      "created_at": "2025-05-19T02:45:37.522Z"
+      "created_at": "2025-06-04T21:54:57.828Z"
     }
   },
   {
     "model": "app.book",
     "pk": 5,
     "fields": {
-      "title": "Medio sol amarillo",
+      "title": "Harry Potter y la piedra filosofal",
       "author": 5,
-      "isbn": "978-030745592",
-      "publisher": 1,
-      "category": 1,
-      "stock": 9,
+      "isbn": "9788478884452",
+      "publisher": 22,
+      "category": 5,
+      "stock": 10,
       "active": true,
-      "created_at": "2025-05-19T02:45:56.095Z"
+      "created_at": "2025-06-04T21:55:34.771Z"
     }
   },
   {
     "model": "app.book",
     "pk": 6,
     "fields": {
-      "title": "Tokio Blues (Norwegian Wood)",
+      "title": "1984",
       "author": 6,
-      "isbn": "978-037571946",
-      "publisher": 11,
-      "category": 1,
-      "stock": 25,
+      "isbn": "9780451524935",
+      "publisher": 2,
+      "category": 2,
+      "stock": 7,
       "active": true,
-      "created_at": "2025-05-19T02:46:58.782Z"
+      "created_at": "2025-06-04T21:55:56.065Z"
     }
   },
   {
     "model": "app.book",
     "pk": 7,
     "fields": {
-      "title": "El segundo sexo",
+      "title": "Tokio Blues",
       "author": 7,
-      "isbn": "978-030727714",
-      "publisher": 12,
-      "category": 6,
-      "stock": 7,
+      "isbn": "9788498387087",
+      "publisher": 7,
+      "category": 1,
+      "stock": 5,
       "active": true,
-      "created_at": "2025-05-19T02:47:37.221Z"
+      "created_at": "2025-06-04T21:56:34.653Z"
     }
   },
   {
     "model": "app.book",
     "pk": 8,
     "fields": {
-      "title": "Fundación",
+      "title": "El resplandor",
       "author": 8,
-      "isbn": "978-055380371",
-      "publisher": 3,
-      "category": 3,
-      "stock": 16,
+      "isbn": "9780307743657",
+      "publisher": 19,
+      "category": 7,
+      "stock": 6,
       "active": true,
-      "created_at": "2025-05-19T02:48:04.195Z"
+      "created_at": "2025-06-04T21:57:28.208Z"
     }
   },
   {
     "model": "app.book",
     "pk": 9,
     "fields": {
-      "title": "La casa de los espíritus",
+      "title": "Orgullo y prejuicio",
       "author": 9,
-      "isbn": "978-030774476",
-      "publisher": 1,
-      "category": 1,
-      "stock": 10,
+      "isbn": "9780141439518",
+      "publisher": 2,
+      "category": 3,
+      "stock": 4,
       "active": true,
-      "created_at": "2025-05-19T02:48:22.575Z"
+      "created_at": "2025-06-04T21:57:56.029Z"
     }
   },
   {
     "model": "app.book",
     "pk": 10,
     "fields": {
-      "title": "Hamlet",
+      "title": "Las venas abiertas de América Latina",
       "author": 10,
-      "isbn": "978-074347712",
-      "publisher": 10,
-      "category": 10,
-      "stock": 20,
+      "isbn": "9789682315270",
+      "publisher": 9,
+      "category": 9,
+      "stock": 5,
       "active": true,
-      "created_at": "2025-05-19T02:48:45.293Z"
-    }
-  },
-  {
-    "model": "app.book",
-    "pk": 11,
-    "fields": {
-      "title": "El amor en los tiempos del cólera",
-      "author": 1,
-      "isbn": "978-030727706",
-      "publisher": 5,
-      "category": 4,
-      "stock": 14,
-      "active": true,
-      "created_at": "2025-05-19T02:49:09.946Z"
-    }
-  },
-  {
-    "model": "app.book",
-    "pk": 12,
-    "fields": {
-      "title": "Emma",
-      "author": 2,
-      "isbn": "978-014143958",
-      "publisher": 2,
-      "category": 4,
-      "stock": 28,
-      "active": true,
-      "created_at": "2025-05-19T02:49:35.537Z"
-    }
-  },
-  {
-    "model": "app.book",
-    "pk": 13,
-    "fields": {
-      "title": "It (Eso)",
-      "author": 3,
-      "isbn": "978-150114290",
-      "publisher": 3,
-      "category": 2,
-      "stock": 19,
-      "active": true,
-      "created_at": "2025-05-19T02:49:59.325Z"
+      "created_at": "2025-06-04T21:58:24.637Z"
     }
   },
   {
@@ -1225,9 +1493,9 @@
     "pk": 1,
     "fields": {
       "book": 1,
-      "user": 5,
-      "request_date": "2025-05-19",
-      "due_date": "2025-05-20",
+      "user": 2,
+      "request_date": "2025-05-14",
+      "due_date": "2025-05-21",
       "return_date": "2025-05-21",
       "status": "returned"
     }
@@ -1236,112 +1504,100 @@
     "model": "app.loan",
     "pk": 2,
     "fields": {
-      "book": 13,
-      "user": 9,
-      "request_date": "2025-05-20",
-      "due_date": "2025-05-24",
-      "return_date": "2025-05-21",
-      "status": "returned"
+      "book": 8,
+      "user": 11,
+      "request_date": "2025-06-04",
+      "due_date": "2025-06-11",
+      "return_date": null,
+      "status": "active"
     }
   },
   {
     "model": "app.loan",
     "pk": 3,
     "fields": {
-      "book": 6,
-      "user": 6,
-      "request_date": "2025-05-21",
-      "due_date": "2025-05-24",
-      "return_date": "2025-05-21",
-      "status": "returned"
+      "book": 8,
+      "user": 9,
+      "request_date": "2025-06-04",
+      "due_date": "2025-06-11",
+      "return_date": null,
+      "status": "active"
     }
   },
   {
     "model": "app.loan",
     "pk": 4,
     "fields": {
-      "book": 4,
-      "user": 6,
-      "request_date": "2025-05-21",
-      "due_date": "2025-05-31",
+      "book": 7,
+      "user": 7,
+      "request_date": "2025-05-14",
+      "due_date": "2025-05-21",
       "return_date": null,
       "status": "active"
     }
   },
   {
-    "model": "app.loan",
-    "pk": 5,
+    "model": "app.user",
+    "pk": 1,
     "fields": {
-      "book": 9,
-      "user": 5,
-      "request_date": "2025-05-22",
-      "due_date": "2025-05-29",
-      "return_date": null,
-      "status": "active"
+      "password": "pbkdf2_sha256$1000000$XwijPCUVY9kHwbPeSdq4Rr$+5lGrLJJqszHNO83nO3cEMxnLHd6br7+dIPZsybf2zQ=",
+      "last_login": "2025-06-04T21:39:48Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "admin",
+      "last_name": "user",
+      "email": "admin@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-06-04T21:39:43Z",
+      "role": "admin",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "app.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$FPxJdIVlXjsm5WxuuuFD85$Wq1qMMBg8+3b/o+7Kxv/+ZBiaAR6H9mLgW7007kwp54=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "lmartinez",
+      "first_name": "Lucía",
+      "last_name": "Martínez",
+      "email": "lmartinez@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-06-04T21:41:05Z",
+      "role": "admin",
+      "groups": [],
+      "user_permissions": []
     }
   },
   {
     "model": "app.user",
     "pk": 3,
     "fields": {
-      "password": "pbkdf2_sha256$1000000$7OMKrCOg53mBQ1rdkDNTD5$/8x+rZEzWRqpenK6RxdP902pyFBYA/B/rrABvBmkeew=",
-      "last_login": "2025-05-27T23:42:54.657Z",
-      "is_superuser": true,
-      "username": "admin",
-      "first_name": "Admin",
-      "last_name": "User",
-      "email": "admin@example.com",
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2025-05-19T01:23:15Z",
-      "role": "admin",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "app.user",
-    "pk": 5,
-    "fields": {
-      "password": "pbkdf2_sha256$1000000$IEFJRwC07hD1xbSpOPmZYK$vFvra11sHKlna9btogWYEvjuVdmslbNw89gbw0IV/EM=",
-      "last_login": "2025-05-24T02:02:47.321Z",
+      "password": "pbkdf2_sha256$1000000$j11eT9XcvxT8m0Cdfu36hT$fZWOiZ3qbVScQaJjJiShKsJSP1sWVJDnhJ27NZnAdMw=",
+      "last_login": null,
       "is_superuser": false,
-      "username": "agarcia",
-      "first_name": "Ana",
-      "last_name": "García",
-      "email": "agarcia@example.com",
+      "username": "jrojas",
+      "first_name": "Javier",
+      "last_name": "Rojas",
+      "email": "jrojas@example.com",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "2025-05-19T02:18:17Z",
-      "role": "admin",
+      "date_joined": "2025-06-04T21:42:28Z",
+      "role": "librarian",
       "groups": [],
       "user_permissions": []
     }
   },
   {
     "model": "app.user",
-    "pk": 6,
+    "pk": 4,
     "fields": {
-      "password": "pbkdf2_sha256$1000000$J1xAKJNq77xqSeTNsaYLeo$IbGNvu3sYdj+IIVR9lwq1KJpbK9HmuFghykF+9+tCvw=",
-      "last_login": "2025-05-24T02:03:03.211Z",
-      "is_superuser": false,
-      "username": "lmartinez",
-      "first_name": "Luis",
-      "last_name": "Martínez",
-      "email": "lmartinez@example.com",
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2025-05-19T02:19:43.646Z",
-      "role": "lector",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "app.user",
-    "pk": 7,
-    "fields": {
-      "password": "pbkdf2_sha256$1000000$DPhkQ3C5kglHHUgEgPo2mu$/Nu7tM3MdbeGtjrfJglETaReUaAmjxem1V/DF1alTfA=",
+      "password": "pbkdf2_sha256$1000000$lpfJljfS9MiP3uUSArDUST$JgF/kzgDEoxAsBVbA6CH7VKj2xUbOVX6vGig1Oly0O4=",
       "last_login": null,
       "is_superuser": false,
       "username": "mperez",
@@ -1350,7 +1606,64 @@
       "email": "mperez@example.com",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "2025-05-19T02:30:14Z",
+      "date_joined": "2025-04-04T20:43:22Z",
+      "role": "lector",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "app.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$qXwfIA0n7vRyIyO93Mqfsg$sXbo9ncaPC5KNJkzu0RzML/BExhfr8rrHIUSehtb+2A=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "cfernandez",
+      "first_name": "Carlos",
+      "last_name": "Fernández",
+      "email": "cfernandez@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-06-04T21:43:38Z",
+      "role": "admin",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "app.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$neZk8K4VRZFrwb8cQqkDXQ$6MQoA4rhGkdXxrfJfLkAIKH486oFcKEpjiDLaqpGwQk=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "asanchez",
+      "first_name": "Ana",
+      "last_name": "Sánchez",
+      "email": "asanchez@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-03-04T20:44:00Z",
+      "role": "librarian",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "app.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$QlMmSxcTL1yjUksSK0UHUa$GzAjA8NFmLsDZC8qiPu77RyJiRxqQ34bvTNiGd7sW9Y=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tcontreras",
+      "first_name": "Tomás",
+      "last_name": "Contreras",
+      "email": "tcontreras@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-05-04T21:44:17Z",
       "role": "lector",
       "groups": [],
       "user_permissions": []
@@ -1360,16 +1673,16 @@
     "model": "app.user",
     "pk": 8,
     "fields": {
-      "password": "pbkdf2_sha256$1000000$uzZvJqMF8s175qcRCirCIs$mtoaleVZOE1WTR0xYhvUl0XSKjj2Nk9DGqL8WfgMF9Y=",
+      "password": "pbkdf2_sha256$1000000$BgwOwHTtbnKbKamziR1otI$YDASE/DZ9H+5vEsctFfKJQmME/fw/0OCgMtIYOid8nU=",
       "last_login": null,
       "is_superuser": false,
-      "username": "cruiz",
-      "first_name": "Carlos",
-      "last_name": "Ruiz",
-      "email": "cruiz@example.com",
+      "username": "jnavarro",
+      "first_name": "Joaquín",
+      "last_name": "Navarro",
+      "email": "jnavarro@example.com",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "2025-05-19T02:30:38Z",
+      "date_joined": "2025-06-04T21:44:33Z",
       "role": "lector",
       "groups": [],
       "user_permissions": []
@@ -1379,16 +1692,16 @@
     "model": "app.user",
     "pk": 9,
     "fields": {
-      "password": "pbkdf2_sha256$1000000$AeKl6St5E1YkCrGVgKflD1$O9vh181u+WyZWHnv8riS0a7gOrjSmP/82Blf6S4aE6k=",
+      "password": "pbkdf2_sha256$1000000$LUiLN0Tpvx01kYteIrmaPl$yK25i+oHeHx8QXI6Cj0vMuqswjGmmi6+b376EoYytAo=",
       "last_login": null,
       "is_superuser": false,
-      "username": "slopez",
-      "first_name": "Sofía",
-      "last_name": "López",
-      "email": "slopez@example.com",
+      "username": "rvera",
+      "first_name": "Rocío",
+      "last_name": "Vera",
+      "email": "rvera@example.com",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "2025-05-19T02:31:01Z",
+      "date_joined": "2025-05-04T21:44:52Z",
       "role": "librarian",
       "groups": [],
       "user_permissions": []
@@ -1398,17 +1711,36 @@
     "model": "app.user",
     "pk": 10,
     "fields": {
-      "password": "pbkdf2_sha256$1000000$h1NlPZRFqUFzAtOaqMckV4$8NfQ/YREbEipcRnjtC0MwVUm2VM3cFTvzXAcMyP3tbs=",
+      "password": "pbkdf2_sha256$1000000$dHsI4Dwm1Qk1NwkZD1sEhm$zjyQTGug5zwddEYCqyxD/PnRgKNrG5liFc4NRVNso40=",
       "last_login": null,
       "is_superuser": false,
-      "username": "jfernandez",
-      "first_name": "Javier",
-      "last_name": "Fernández",
-      "email": "jfernandez@example.com",
+      "username": "hcastro",
+      "first_name": "Héctor",
+      "last_name": "Castro",
+      "email": "hcastro@example.com",
       "is_staff": false,
       "is_active": true,
-      "date_joined": "2025-05-19T02:31:26Z",
-      "role": "librarian",
+      "date_joined": "2025-06-04T21:45:10Z",
+      "role": "admin",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "app.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$KexcEe4ja3O5HEAZ8eBPc6$nXhbq4DjwmuRevL64poT6XtYF5znItfPFu8mdwO7ojI=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "dlopez",
+      "first_name": "Daniela",
+      "last_name": "López",
+      "email": "dlopez@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-06-04T21:45:28Z",
+      "role": "lector",
       "groups": [],
       "user_permissions": []
     }
