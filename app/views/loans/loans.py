@@ -7,9 +7,11 @@ from ...models import Loan
 @login_required
 def loans(request):
     if request.user.role == "lector":
-        loans = Loan.objects.filter(user=request.user)
+        loans = Loan.objects.filter(user=request.user).order_by(
+            "-request_date", "status"
+        )
     else:
-        loans = Loan.objects.all()
+        loans = Loan.objects.all().order_by("-request_date", "status")
 
     status = request.GET.get("status")
     search = request.GET.get("search")
