@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from ...models import Book, Loan, User
 from datetime import date, timedelta
+from django.db.models import Q
 
 
 @login_required
@@ -35,8 +36,9 @@ def new_loan(request):
                 {**context, "error": "All fields are required."},
             )
 
-        # Verificar si un usuario ya tiene un prestamo activo
-        if Loan.objects.filter(status="active", user_id=user_id).exists():
+        if Loan.objects.filter(
+            Q(status="active") | Q(status="overdue"), user=user_id
+        ).exists():
             return render(
                 request,
                 "pages/loans/new_loan.html",
