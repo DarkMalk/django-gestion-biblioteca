@@ -2,6 +2,10 @@
 
 Este proyecto es una plataforma diseñada para gestionar libros y préstamos de manera eficiente. Construida con Django como framework backend y TailwindCSS para el diseño frontend, ofrece una solución moderna y escalable para bibliotecas y sistemas de gestión de recursos bibliográficos.
 
+## Visualización de la pagina
+
+![preview](./preview/django-gestion-biblioteca.webp)
+
 ## Requisitos
 
 - **Python**: v3.12 (recomendada)
