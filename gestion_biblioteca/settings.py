@@ -90,8 +90,8 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://django-gestion-biblioteca-production.up.railway.app",
-    "http://django-gestion-biblioteca-production.up.railway.app",
+    "http://library-system.darkmalk.online",
+    "https://library-system.darkmalk.online",
 ]
 
 CSRF_COOKIE_SECURE = True
